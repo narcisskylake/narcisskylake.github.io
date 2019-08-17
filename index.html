@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Training Prototype</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="ng-cloak" data-ng-app="tApp" data-ng-controller="TrainingController as tc">
+
+<main>
+  <div class="container">
+    <div class="row my-5 d-flex justify-content-center">
+      <div class="col-sm-12 col-md-11 col-lg-9 card shadow p-0">
+        <div class="card-header d-flex align-items-center justify-content-between">
+          <p class="m-0">Training Questionnaire</p>
+          <div data-ng-show="tc.isQuizStarted">
+            <span data-ng-hide="tc.isComplete();" class="badge badge-primary font-weight-normal">{{tc.currentQuestionCount + 1}} of {{tc.totalQuestionItems}}</span>
+            <span data-ng-show="tc.isComplete();" class="badge badge-success font-weight-normal">Completed</span>
+          </div>
+        </div>
+        <div id="training-body" class="card-body">
+          <div data-ng-hide="tc.isQuizStarted">
+
+            <form data-ng-submit="tc.startQuiz();">
+              <div class="col-sm-5 p-0">
+                <div class="form-group">
+                  <label for="name">Name:</label>
+                  <input data-ng-model="tc.userInfo.name" type="text" class="form-control" id="name" placeholder="Enter your name">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Start Quiz</button>
+              </div>
+            </form>
+          </div>
+          <div data-ng-show="tc.isQuizStarted">
+            <div data-ng-hide="tc.isComplete();" class="question-block">
+              <div class="question-container">
+                <p class="question">
+                  {{tc.currentQuestionItem.question}}
+                </p>
+                <ul class="question-details list-unstyled p-0">
+                  <li class="q-detail mb-3" data-ng-repeat="extraDetail in tc.currentQuestionItem.extraDetails">
+                    {{extraDetail}}
+                  </li>
+                </ul>
+              </div>
+              <hr>
+              <form data-ng-submit="tc.nextQuestion();">
+                <div class="question-options mb-5">
+
+                  <div class="btn-group btn-group-toggle options-group" data-toggle="buttons">
+                    <label class="btn btn-normal" data-ng-repeat="option in tc.currentQuestionItem.options">
+                      <input data-ng-model="tc.currentAnswer.answerOrder" value="{{$index}}" type="radio" name="options" autocomplete="off">
+                      {{option.value}}
+                    </label>
+
+                  </div>
+
+                </div>
+
+                <div data-ng-show="tc.currentAnswer.answerOrder > -1" class="question-controls">
+                  <button data-ng-show="tc.isLastQuestion();" type="submit" class="btn btn-success float-right">Finish</button>
+                  <button data-ng-hide="tc.isLastQuestion();" type="submit" class="btn btn-primary float-right">Proceed to next question</button>
+                </div>
+              </form>
+
+            </div>
+            <div data-ng-show="tc.isComplete();" class="completed-message">
+              <div class="congrats-message text-center">
+                <p class="congrats-heading">Congratulations!!! {{tc.userInfo.name}}</p>
+                <p class="total-score">You scored: {{tc.totalScore}} out of {{tc.totalQuestionItems}}</p>
+              </div>
+
+              <div class="score-details">
+                <div class="answers-review" data-ng-repeat="item in tc.userAnswers">
+                  <p>{{tc.getQuestion(item)}}</p>
+                  <p>Your answer: {{tc.getUserAnswer(item)}}</p>
+                  <p ng-bind-html="tc.getCorrectAnswer(item);"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/popper.min.js"></script>
+
+<script src="js/angular.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
