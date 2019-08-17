@@ -53,7 +53,7 @@
 
                   <div class="btn-group btn-group-toggle options-group" data-toggle="buttons">
                     <label class="btn btn-normal" data-ng-repeat="option in tc.currentQuestionItem.options">
-                      <input data-ng-model="tc.currentAnswer.answerOrder" value="{{$index}}" type="radio" name="options" autocomplete="off">
+                      <input data-ng-model="tc.currentAnswer.answer" value="{{option.key}}" type="radio" name="options" autocomplete="off">
                       {{option.value}}
                     </label>
 
@@ -61,7 +61,7 @@
 
                 </div>
 
-                <div data-ng-show="tc.currentAnswer.answerOrder > -1" class="question-controls">
+                <div data-ng-show="tc.currentAnswer.answer" class="question-controls">
                   <button data-ng-show="tc.isLastQuestion();" type="submit" class="btn btn-success float-right">Finish</button>
                   <button data-ng-hide="tc.isLastQuestion();" type="submit" class="btn btn-primary float-right">Proceed to next question</button>
                 </div>
@@ -77,7 +77,7 @@
               <div class="score-details">
                 <div class="answers-review" data-ng-repeat="item in tc.userAnswers">
                   <p>{{tc.getQuestion(item)}}</p>
-                  <p>Your answer: {{tc.getUserAnswer(item)}}</p>
+                  <p>Your answer: {{tc.getUserAnswerText(item)}}</p>
                   <p ng-bind-html="tc.getCorrectAnswer(item);"></p>
                 </div>
               </div>
