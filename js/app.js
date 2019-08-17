@@ -6,7 +6,7 @@ angular.module('rApp', []);
         .module('rApp')
         .controller('ReviewerController', ReviewerController);
 
-    function ReviewerController($scope, $sce) {
+    function ReviewerController($http, $sce) {
 
         let rc = this;
 
@@ -14,129 +14,18 @@ angular.module('rApp', []);
             name: ''
         };
 
-        rc.questions = {
-            items: [
-                {
-                    question: 'People generally invest their money to provide:',
-                    extraDetails: [
-                        'I. An improvement in their financial position',
-                        'II. A less comfortable standard of living',
-                        'III. Retirement income',
-                        'IV. Funds for paying necessary expenses and taxes when the person dies'
-                    ],
-                    options: [
-                        {
-                            'key' : 'a',
-                            'value' : 'I, II and III'
-                        },{
-                            'key' : 'b',
-                            'value' : 'I, III and IV'
-                        },{
-                            'key' : 'c',
-                            'value' : 'I, II and IV'
-                        },{
-                            'key' : 'd',
-                            'value' : 'II, III and IV'
-                        }
-                    ],
-                    answer: 'b'
-                },
-                {
-                    question: 'Which of the following funds is comprised of a higher proportion of equity and a lower proportion of fixed-income',
-                    extraDetails: [],
-                    options: [
-                        {
-                            'key' : 'a',
-                            'value' : 'Bond Funds'
-                        },{
-                            'key' : 'b',
-                            'value' : 'Cash Funds'
-                        },{
-                            'key' : 'c',
-                            'value' : 'Managed Funds'
-                        },{
-                            'key' : 'd',
-                            'value' : 'Mixed Funds'
-                        }
-                    ],
-                    answer: 'c'
-                },
-                {
-                    question: 'Which of the following are the main characteristics of Variable Life insurance policies?',
-                    extraDetails: [
-                        'I. The policies can be used for investments, as a source of regular savings and protection.',
-                        'II. The withdrawal and protection benefit are determined by the investment performance of the underlying',
-                        'III. The net withdrawal values of the policies are the gross withdrawal values shown in the policy which'
-                    ],
-                    options: [
-                        {
-                            'key' : 'a',
-                            'value' : 'I only'
-                        },{
-                            'key' : 'b',
-                            'value' : 'II only'
-                        },{
-                            'key' : 'c',
-                            'value' : 'I and II only'
-                        },{
-                            'key' : 'd',
-                            'value' : 'I, II and III'
-                        }
-                    ],
-                    answer: 'c'
-                },
-                {
-                    question: 'Which of the following statements are FALSE?',
-                    extraDetails: [
-                        'I. The policyowners may request a partial withdrawal of the policy and the amount will be met by cashing the units at the offer price.',
-                        'II. The structure of charges and the investment content of a Variable Life policy are specified in the policy document and the policy statement.',
-                        'III. Some Variable Life policies grant loans to policyowners which is limited to a percentage of the cash value.',
-                        'IV. Commissions and office expenses are met by a variety of implicit charges, some of which are variable.'
-                    ],
-                    options: [
-                        {
-                            'key' : 'a',
-                            'value' : 'I and II only'
-                        },{
-                            'key' : 'b',
-                            'value' : 'I and III only'
-                        },{
-                            'key' : 'c',
-                            'value' : 'II and III only'
-                        },{
-                            'key' : 'd',
-                            'value' : 'All of the above'
-                        }
-                    ],
-                    answer: 'b'
-                },
-                {
-                    question: 'Which of the following statements about the feature of Regular Premium Variable Life Policy are TRUE?',
-                    extraDetails: [
-                        'I. Top-ups are usually allowed.',
-                        'II. The level of coverage can be varied.',
-                        'III. Premium holidays are usually allowed.'
-                    ],
-                    options: [
-                        {
-                            'key' : 'a',
-                            'value' : 'I and II only'
-                        },{
-                            'key' : 'b',
-                            'value' : 'I and III only'
-                        },{
-                            'key' : 'c',
-                            'value' : 'II and III only'
-                        },{
-                            'key' : 'd',
-                            'value' : 'I, II and III'
-                        }
-                    ],
-                    answer: 'd'
-                }
-            ]
-        };
+        rc.questions = {};
+        rc.getQuestionsJSON = getQuestionsJSON;
 
+        function getQuestionsJSON() {
+            $http.get('js/questions.json')
+                .then(function(data) {
+
+                    rc.questions = data.data;
+
+                    rc.init();
+                });
+        }
 
         rc.userAnswers = [];
 
@@ -177,6 +66,8 @@ angular.module('rApp', []);
         rc.getCorrectAnswer = getCorrectAnswer;
 
         rc.shuffleQuestionsAnswers = shuffleQuestionsAnswers;
+
+        rc.init = init;
 
 
         function startQuiz() {
@@ -308,12 +199,15 @@ angular.module('rApp', []);
         }
 
 
+        function init() {
+            rc.shuffleQuestionsAnswers();
+
+            rc.initCurrentQuestionItem();
+            rc.initTotalQuestionItems();
+        }
 
 
-        rc.shuffleQuestionsAnswers();
-
-        rc.initCurrentQuestionItem();
-        rc.initTotalQuestionItems();
+        rc.getQuestionsJSON();
 
     }
 })();
