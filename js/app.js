@@ -184,16 +184,12 @@ angular.module('tApp', []);
         
         
         function checkUserAnswers() {
-            console.log(tc.userAnswers);
 
             tc.userAnswers.forEach(function (item, index) {
                 if(item.answerOrder == (tc.questions.items[item.questionOrder].answer - 1)) {
                     tc.totalScore++;
                 }
             });
-
-            console.log(tc.totalScore);
-
         }
 
         function getQuestion(item) {
