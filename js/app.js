@@ -1,20 +1,20 @@
-angular.module('tApp', []);
+angular.module('rApp', []);
 
 (function () {
     'use strict';
     angular
-        .module('tApp')
-        .controller('TrainingController', TrainingController);
+        .module('rApp')
+        .controller('ReviewerController', ReviewerController);
 
-    function TrainingController($scope, $sce) {
+    function ReviewerController($scope, $sce) {
 
-        let tc = this;
+        let rc = this;
 
-        tc.userInfo = {
+        rc.userInfo = {
             name: ''
         };
 
-        tc.questions = {
+        rc.questions = {
             items: [
                 {
                     question: 'People generally invest their money to provide:',
@@ -138,111 +138,111 @@ angular.module('tApp', []);
         };
 
 
-        tc.userAnswers = [];
+        rc.userAnswers = [];
 
 
 
-        tc.currentQuestionCount = 0;
-        tc.currentQuestionItem = {
+        rc.currentQuestionCount = 0;
+        rc.currentQuestionItem = {
             question: '',
             extraDetails: [],
             options: {},
             answer: ''
         };
 
-        tc.currentAnswer = {
+        rc.currentAnswer = {
             questionOrder: -1,
             answer: ''
         };
 
-        tc.totalScore = 0;
+        rc.totalScore = 0;
 
-        tc.totalQuestionItems = 0;
+        rc.totalQuestionItems = 0;
 
-        tc.isQuizStarted = false;
-        tc.startQuiz = startQuiz;
+        rc.isQuizStarted = false;
+        rc.startQuiz = startQuiz;
 
-        tc.nextQuestion = nextQuestion;
-        tc.initCurrentQuestionItem = initCurrentQuestionItem;
-        tc.saveCurrentAnswer = saveCurrentAnswer;
-        tc.clearCurrentAnswer = clearCurrentAnswer;
+        rc.nextQuestion = nextQuestion;
+        rc.initCurrentQuestionItem = initCurrentQuestionItem;
+        rc.saveCurrentAnswer = saveCurrentAnswer;
+        rc.clearCurrentAnswer = clearCurrentAnswer;
 
-        tc.initTotalQuestionItems = initTotalQuestionItems;
-        tc.isLastQuestion = isLastQuestion;
-        tc.isComplete = isComplete;
+        rc.initTotalQuestionItems = initTotalQuestionItems;
+        rc.isLastQuestion = isLastQuestion;
+        rc.isComplete = isComplete;
 
-        tc.checkUserAnswers = checkUserAnswers;
-        tc.getQuestion = getQuestion;
-        tc.getUserAnswerText = getUserAnswerText;
-        tc.getCorrectAnswer = getCorrectAnswer;
+        rc.checkUserAnswers = checkUserAnswers;
+        rc.getQuestion = getQuestion;
+        rc.getUserAnswerText = getUserAnswerText;
+        rc.getCorrectAnswer = getCorrectAnswer;
 
-        tc.shuffleQuestionsAnswers = shuffleQuestionsAnswers;
+        rc.shuffleQuestionsAnswers = shuffleQuestionsAnswers;
 
 
         function startQuiz() {
-            tc.isQuizStarted = true;
+            rc.isQuizStarted = true;
         }
 
         function nextQuestion() {
-            tc.saveCurrentAnswer();
-            tc.currentQuestionCount++;
-            tc.initCurrentQuestionItem();
+            rc.saveCurrentAnswer();
+            rc.currentQuestionCount++;
+            rc.initCurrentQuestionItem();
 
-            if(tc.isComplete()) {
-                tc.checkUserAnswers();
+            if(rc.isComplete()) {
+                rc.checkUserAnswers();
             }
         }
 
         function initCurrentQuestionItem() {
-            tc.currentQuestionItem = tc.questions.items[tc.currentQuestionCount];
-            tc.clearCurrentAnswer();
+            rc.currentQuestionItem = rc.questions.items[rc.currentQuestionCount];
+            rc.clearCurrentAnswer();
         }
 
         function saveCurrentAnswer() {
-            tc.currentAnswer.questionOrder = tc.currentQuestionCount;
-            tc.userAnswers.push(tc.currentAnswer);
+            rc.currentAnswer.questionOrder = rc.currentQuestionCount;
+            rc.userAnswers.push(rc.currentAnswer);
         }
 
         function clearCurrentAnswer() {
-            tc.currentAnswer = {
+            rc.currentAnswer = {
                 questionOrder: -1,
                 answer: ''
             };
         }
 
         function initTotalQuestionItems() {
-            tc.totalQuestionItems = tc.questions.items.length;
+            rc.totalQuestionItems = rc.questions.items.length;
         }
 
         function isLastQuestion() {
-            return (tc.currentQuestionCount + 1) === tc.totalQuestionItems;
+            return (rc.currentQuestionCount + 1) === rc.totalQuestionItems;
         }
 
         function isComplete() {
-            return tc.currentQuestionCount === tc.totalQuestionItems;
+            return rc.currentQuestionCount === rc.totalQuestionItems;
         }
 
 
         function checkUserAnswers() {
-            console.log(tc.userAnswers);
+            console.log(rc.userAnswers);
 
-            tc.userAnswers.forEach(function (item, index) {
-                if(item.answer === (tc.questions.items[item.questionOrder].answer)) {
-                    tc.totalScore++;
+            rc.userAnswers.forEach(function (item, index) {
+                if(item.answer === (rc.questions.items[item.questionOrder].answer)) {
+                    rc.totalScore++;
                 }
             });
 
-            console.log(tc.totalScore);
+            console.log(rc.totalScore);
 
         }
 
         function getQuestion(item) {
-            return tc.questions.items[item.questionOrder].question;
+            return rc.questions.items[item.questionOrder].question;
         }
 
         function getUserAnswerText(item) {
             let userAnswerText = '';
-            let thisQUestionOptions = tc.questions.items[item.questionOrder].options;
+            let thisQUestionOptions = rc.questions.items[item.questionOrder].options;
 
             thisQUestionOptions.forEach(function (options, index) {
                 if(options.key === item.answer) {
@@ -255,11 +255,11 @@ angular.module('tApp', []);
 
         function getCorrectAnswer(item) {
             let userAnswer = item.answer;
-            let correctAnswer = tc.questions.items[item.questionOrder].answer;
+            let correctAnswer = rc.questions.items[item.questionOrder].answer;
 
             let correctAnswerText = '';
 
-            tc.questions.items[item.questionOrder].options.forEach(function (options, index) {
+            rc.questions.items[item.questionOrder].options.forEach(function (options, index) {
                 if(options.key === correctAnswer) {
                     correctAnswerText = options.value;
                 }
@@ -272,14 +272,14 @@ angular.module('tApp', []);
 
 
         function shuffleQuestionsAnswers() {
-            let questionItemsCopy = tc.questions.items;
+            let questionItemsCopy = rc.questions.items;
 
             questionItemsCopy.forEach(function (item, index) {
                 let tempOptions = item.options;
                 questionItemsCopy[index].options = shuffle(tempOptions);
             });
 
-            tc.questions.items = shuffle(questionItemsCopy);
+            rc.questions.items = shuffle(questionItemsCopy);
         }
 
 
@@ -310,10 +310,10 @@ angular.module('tApp', []);
 
 
 
-        tc.shuffleQuestionsAnswers();
+        rc.shuffleQuestionsAnswers();
 
-        tc.initCurrentQuestionItem();
-        tc.initTotalQuestionItems();
+        rc.initCurrentQuestionItem();
+        rc.initTotalQuestionItems();
 
     }
 })();
