@@ -75,7 +75,7 @@
                   <p class="total-score">You scored: {{rc.getCurrentTotalScore()}} out of {{rc.totalQuestionItems}}</p>
                 </div>
                 <div class="text-center mt-3 mb-5">
-                  <button data-ng-click="rc.nextQuizType()" class="btn btn-primary">Proceed to Test</button>
+                  <button data-ng-click="rc.nextQuizType()" class="btn btn-primary">Proceed to next</button>
                 </div>
               </div>
 
@@ -97,6 +97,12 @@
 
             <h1>Proceed to Test</h1>
             <button data-ng-click="rc.resetTest('test')" class="btn btn-primary">Start Quiz</button>
+          </div>
+          <div data-ng-show="rc.steps.endQuiz">
+
+            <h1>Finished!</h1>
+            <p>Review score: {{rc.userAnswers.reviewTotalScore}}</p>
+            <p>Test score: {{rc.userAnswers.testTotalScore}}</p>
           </div>
         </div>
 
