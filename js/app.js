@@ -6,9 +6,31 @@ angular.module('rApp', []);
         .module('rApp')
         .controller('ReviewerController', ReviewerController);
 
-    function ReviewerController($http, $sce) {
+    function ReviewerController($http, $sce, $scope) {
 
         let rc = this;
+
+
+        rc.steps = {
+            "reviewWelcome": true,
+            "review": false,
+            "reviewSummary": false,
+            "testWelcome": false,
+            "test": false,
+            "testReview": false,
+            "endQuiz": false
+        };
+
+        rc.nextStep = nextStep;
+        rc.tempNextStep = "reviewWelcome";
+
+        function nextStep(step) {
+            rc.steps[rc.tempNextStep] = false;
+
+            rc.steps[step] = true;
+            rc.tempNextStep = step;
+        }
+
 
         rc.userInfo = {
             name: ''
@@ -23,11 +45,16 @@ angular.module('rApp', []);
 
                     rc.questions = data.data;
 
-                    rc.init();
+                    rc.init(true);
                 });
         }
 
-        rc.userAnswers = [];
+        rc.userAnswers = {
+            "reviewAnswers": [],
+            "reviewTotalScore": 0,
+            "testAnswers":[],
+            "testTotalScore": 0
+        };
 
 
 
@@ -44,12 +71,20 @@ angular.module('rApp', []);
             answer: ''
         };
 
-        rc.totalScore = 0;
+        // rc.totalScore = 0;
+
+        rc.getCurrentTotalScore = getCurrentTotalScore;
+        function getCurrentTotalScore() {
+            if(rc.steps.review) {
+                return rc.userAnswers.reviewTotalScore;
+            } else {
+                return  rc.userAnswers.testTotalScore;
+            }
+        }
 
         rc.totalQuestionItems = 0;
 
-        rc.isQuizStarted = false;
-        rc.startQuiz = startQuiz;
+
 
         rc.nextQuestion = nextQuestion;
         rc.initCurrentQuestionItem = initCurrentQuestionItem;
@@ -60,28 +95,52 @@ angular.module('rApp', []);
         rc.isLastQuestion = isLastQuestion;
         rc.isComplete = isComplete;
 
-        rc.checkUserAnswers = checkUserAnswers;
+        rc.countUserScore = countUserScore;
         rc.getQuestion = getQuestion;
         rc.getUserAnswerText = getUserAnswerText;
         rc.getCorrectAnswer = getCorrectAnswer;
 
         rc.shuffleQuestionsAnswers = shuffleQuestionsAnswers;
 
+
+        rc.quickCheck = quickCheck;
+        rc.highlightCorrectAnswer = highlightCorrectAnswer;
+        rc.initQuickCheck = initQuickCheck;
+        rc.enableOptions = enableOptions;
+
+        rc.nextQuizType = nextQuizType;
+
+        function nextQuizType() {
+            if(rc.steps.review) {
+                rc.nextStep('testWelcome');
+            } else if(rc.steps.test) {
+                rc.nextStep('endQuiz');
+            }
+
+        }
+
+
+        rc.resetTest = resetTest;
+
         rc.init = init;
 
 
-        function startQuiz() {
-            rc.isQuizStarted = true;
-        }
 
         function nextQuestion() {
-            rc.saveCurrentAnswer();
+            if(rc.steps.review) {
+                rc.saveCurrentAnswer('review');
+            } else if(rc.steps.test) {
+                rc.saveCurrentAnswer('test');
+            }
+
             rc.currentQuestionCount++;
             rc.initCurrentQuestionItem();
 
             if(rc.isComplete()) {
-                rc.checkUserAnswers();
+                rc.countUserScore();
             }
+
+            enableOptions(true);
         }
 
         function initCurrentQuestionItem() {
@@ -89,9 +148,14 @@ angular.module('rApp', []);
             rc.clearCurrentAnswer();
         }
 
-        function saveCurrentAnswer() {
+        function saveCurrentAnswer(quizType) {
             rc.currentAnswer.questionOrder = rc.currentQuestionCount;
-            rc.userAnswers.push(rc.currentAnswer);
+
+            if(quizType === "review") {
+                rc.userAnswers.reviewAnswers.push(rc.currentAnswer);
+            } else {
+                rc.userAnswers.testAnswers.push(rc.currentAnswer);
+            }
         }
 
         function clearCurrentAnswer() {
@@ -114,16 +178,21 @@ angular.module('rApp', []);
         }
 
 
-        function checkUserAnswers() {
-            console.log(rc.userAnswers);
+        function countUserScore() {
+            let currentQuizType, currentTotalScore;
+            if(rc.steps.review) {
+                currentQuizType = rc.userAnswers.reviewAnswers;
+                currentTotalScore = "reviewTotalScore";
+            } else {
+                currentQuizType = rc.userAnswers.testAnswers;
+                currentTotalScore = "testTotalScore";
+            }
 
-            rc.userAnswers.forEach(function (item, index) {
+            currentQuizType.forEach(function (item, index) {
                 if(item.answer === (rc.questions.items[item.questionOrder].answer)) {
-                    rc.totalScore++;
+                    rc.userAnswers[currentTotalScore]++;
                 }
             });
-
-            console.log(rc.totalScore);
 
         }
 
@@ -133,9 +202,9 @@ angular.module('rApp', []);
 
         function getUserAnswerText(item) {
             let userAnswerText = '';
-            let thisQUestionOptions = rc.questions.items[item.questionOrder].options;
+            let thisQuestionOptions = rc.questions.items[item.questionOrder].options;
 
-            thisQUestionOptions.forEach(function (options, index) {
+            thisQuestionOptions.forEach(function (options, index) {
                 if(options.key === item.answer) {
                     userAnswerText = options.value;
                 }
@@ -199,11 +268,88 @@ angular.module('rApp', []);
         }
 
 
-        function init() {
+
+        function enableOptions(state) {
+            let optionsBtnGroup = document.querySelector('.options-group');
+
+            if(state) {
+                optionsBtnGroup.classList.remove("disable-options");
+            } else {
+                optionsBtnGroup.classList.add("disable-options");
+            }
+        }
+
+        function initQuickCheck(isEnabled) {
+            let el = document.querySelector('.options-group')
+
+            if(isEnabled) {
+                el.addEventListener('click', quickCheck);
+            } else {
+                el.removeEventListener('click', quickCheck);
+            }
+        }
+
+        function quickCheck(evt) {
+
+            if(evt.target.classList.contains('option-item')) {
+                enableOptions(false);
+
+                let optionItem = evt.target;
+                let currentAnswer = optionItem.children[0].value;
+
+                if(currentAnswer === rc.currentQuestionItem.answer) {
+                    optionItem.classList.remove('btn-normal');
+                    optionItem.classList.add('btn-success');
+                } else {
+                    optionItem.classList.remove('btn-normal');
+                    optionItem.classList.add('btn-danger');
+
+                    rc.highlightCorrectAnswer();
+                }
+            }
+        }
+
+        function highlightCorrectAnswer() {
+            let optionValues = document.querySelectorAll(".option-value");
+
+            let optionValuesLen = optionValues.length;
+            for(let i = 0; i < optionValuesLen; i++) {
+                let currentValue = optionValues[i];
+
+                if(currentValue.value === rc.currentQuestionItem.answer) {
+
+                    let parentNode = currentValue.parentNode;
+                    parentNode.classList.remove('btn-normal');
+                    parentNode.classList.add('btn-success');
+                }
+            }
+
+        }
+
+
+
+        function resetTest(setQuizTo) {
+
+
+            switch (setQuizTo) {
+                case 'test':
+                    rc.currentQuestionCount = 0;
+                    rc.totalScore = 0;
+                    rc.init(false);
+                    rc.nextStep('test');
+                    break;
+            }
+
+
+        }
+
+
+        function init(enableQuickCheck) {
             rc.shuffleQuestionsAnswers();
 
             rc.initCurrentQuestionItem();
             rc.initTotalQuestionItems();
+            rc.initQuickCheck(enableQuickCheck);
         }
 
 

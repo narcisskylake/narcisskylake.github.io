@@ -16,15 +16,15 @@
       <div class="col-sm-12 col-md-11 col-lg-9 card shadow p-0">
         <div class="card-header d-flex align-items-center justify-content-between">
           <p class="m-0">Reviewer</p>
-          <div data-ng-show="rc.isQuizStarted">
+          <div data-ng-show="rc.steps.review || rc.steps.test">
             <span data-ng-hide="rc.isComplete();" class="badge badge-primary font-weight-normal">{{rc.currentQuestionCount + 1}} of {{rc.totalQuestionItems}}</span>
             <span data-ng-show="rc.isComplete();" class="badge badge-success font-weight-normal">Completed</span>
           </div>
         </div>
         <div id="training-body" class="card-body">
-          <div data-ng-hide="rc.isQuizStarted">
+          <div data-ng-show="rc.steps.reviewWelcome">
 
-            <form data-ng-submit="rc.startQuiz();">
+            <form data-ng-submit="rc.nextStep('review');">
               <div class="col-sm-5 p-0">
                 <div class="form-group">
                   <label for="name">Name:</label>
@@ -35,7 +35,7 @@
               </div>
             </form>
           </div>
-          <div data-ng-show="rc.isQuizStarted">
+          <div data-ng-show="rc.steps.review || rc.steps.test">
             <div data-ng-hide="rc.isComplete();" class="question-block">
               <div class="question-container">
                 <p class="question">
@@ -52,8 +52,8 @@
                 <div class="question-options mb-5">
 
                   <div class="btn-group btn-group-toggle options-group" data-toggle="buttons">
-                    <label class="btn btn-normal" data-ng-repeat="option in rc.currentQuestionItem.options">
-                      <input data-ng-model="rc.currentAnswer.answer" value="{{option.key}}" type="radio" name="options" autocomplete="off">
+                    <label class="btn btn-normal option-item" data-ng-repeat="option in rc.currentQuestionItem.options">
+                      <input class="option-value" data-ng-model="rc.currentAnswer.answer" value="{{option.key}}" type="radio" name="options" autocomplete="off">
                       {{option.value}}
                     </label>
 
@@ -69,19 +69,34 @@
 
             </div>
             <div data-ng-show="rc.isComplete();" class="completed-message">
-              <div class="congrats-message text-center">
-                <p class="congrats-heading">Congratulations!!! {{rc.userInfo.name}}</p>
-                <p class="total-score">You scored: {{rc.totalScore}} out of {{rc.totalQuestionItems}}</p>
+              <div class="congrats">
+                <div class="congrats-message text-center">
+                  <p class="congrats-heading">Congratulations!!! {{rc.userInfo.name}}</p>
+                  <p class="total-score">You scored: {{rc.getCurrentTotalScore()}} out of {{rc.totalQuestionItems}}</p>
+                </div>
+                <div class="text-center mt-3 mb-5">
+                  <button data-ng-click="rc.nextQuizType()" class="btn btn-primary">Proceed to Test</button>
+                </div>
               </div>
 
               <div class="score-details">
-                <div class="answers-review" data-ng-repeat="item in rc.userAnswers">
+                <div class="answers-review" data-ng-show="rc.steps.review" data-ng-repeat="item in rc.userAnswers.reviewAnswers">
+                  <p>{{rc.getQuestion(item)}}</p>
+                  <p>Your answer: {{rc.getUserAnswerText(item)}}</p>
+                  <p ng-bind-html="rc.getCorrectAnswer(item);"></p>
+                </div>
+                <div class="answers-review" data-ng-show="rc.steps.test" data-ng-repeat="item in rc.userAnswers.testAnswers">
                   <p>{{rc.getQuestion(item)}}</p>
                   <p>Your answer: {{rc.getUserAnswerText(item)}}</p>
                   <p ng-bind-html="rc.getCorrectAnswer(item);"></p>
                 </div>
               </div>
             </div>
+          </div>
+          <div data-ng-show="rc.steps.testWelcome">
+
+            <h1>Proceed to Test</h1>
+            <button data-ng-click="rc.resetTest('test')" class="btn btn-primary">Start Quiz</button>
           </div>
         </div>
 

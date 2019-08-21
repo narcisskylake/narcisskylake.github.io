@@ -25,6 +25,19 @@ body {
     display: block;
 }
 
+.disable-options {
+    pointer-events: none;
+}
+
+.options-group .btn input[type=checkbox],
+.options-group .btn input[type=radio],
+.options-group .btn-group .btn input[type=checkbox],
+.options-group .btn-group .btn input[type=radio] {
+    position: absolute;
+    clip: rect(0,0,0,0);
+    pointer-events: none;
+}
+
 .options-group .btn {
     background-color: #fff;
     border-radius: .25rem !important;
@@ -56,6 +69,58 @@ body {
     color: #fff;
     background-color: #007bff;
     border-color: #007bff;
+}
+
+
+
+.btn-success:not(:disabled):not(.disabled).active,
+.btn-success:not(:disabled):not(.disabled):active,
+.show>.btn-success.dropdown-toggle,
+.options-group .btn-success {
+    background-color: #43a047;
+    border-color: #43a047;
+    padding-right: 2.5rem;
+    position: relative;
+}
+
+.btn-success:not(:disabled):not(.disabled).active:before,
+.btn-success:not(:disabled):not(.disabled):active:before,
+.show>.btn-success.dropdown-toggle:before,
+.options-group .btn-success:before {
+    content: '';
+    position: absolute;
+    background-image: url(../images/success.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1.25rem;
+    width: 1.25rem;
+    right: .5rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.answer .btn {
+    margin-bottom: 0;
+}
+.answer .btn-normal:not(:disabled):not(.disabled).active {
+    color: #212529;
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.correct-answer {
+    background-color: #43a047;
+    border: solid 2px #43a047;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    padding: .5rem;
+}
+.correct-answer:before {
+    content: 'Correct';
+    color: #fff;
+    display: block;
+    padding-bottom: .5rem;
 }
 
 
