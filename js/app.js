@@ -9,15 +9,18 @@ angular.module('rApp', []);
     function ReviewerController($http, $sce, $scope) {
 
         let rc = this;
+        let VARIABLEQUESTIONSFILE = 'js/variableQuestions.json';
+        let TRADITIONALQUESTIONSFILE = 'js/traditionalQuestions.json';
 
+        rc.examType = 'variable';
 
         rc.steps = {
             "reviewWelcome": true,
             "review": false,
             "reviewSummary": false,
-            "testWelcome": false,
-            "test": false,
-            "testReview": false,
+            "examWelcome": false,
+            "exam": false,
+            "examReview": false,
             "endQuiz": false
         };
 
@@ -40,7 +43,20 @@ angular.module('rApp', []);
         rc.getQuestionsJSON = getQuestionsJSON;
 
         function getQuestionsJSON() {
-            $http.get('js/questions.json')
+            let questionsFile = '';
+
+            switch (rc.examType) {
+                case 'variable':
+                    questionsFile = VARIABLEQUESTIONSFILE;
+                    break;
+
+                case 'traditional':
+                    questionsFile = TRADITIONALQUESTIONSFILE;
+                    break;
+            }
+
+
+            $http.get(questionsFile)
                 .then(function(data) {
 
                     rc.questions = data.data;
@@ -52,8 +68,8 @@ angular.module('rApp', []);
         rc.userAnswers = {
             "reviewAnswers": [],
             "reviewTotalScore": 0,
-            "testAnswers":[],
-            "testTotalScore": 0
+            "examAnswers":[],
+            "examTotalScore": 0
         };
 
 
@@ -78,7 +94,7 @@ angular.module('rApp', []);
             if(rc.steps.review) {
                 return rc.userAnswers.reviewTotalScore;
             } else {
-                return  rc.userAnswers.testTotalScore;
+                return  rc.userAnswers.examTotalScore;
             }
         }
 
@@ -110,17 +126,32 @@ angular.module('rApp', []);
 
         rc.nextQuizType = nextQuizType;
 
+        rc.changeLabels = changeLabels;
+        rc.screenLabel = 'Reviewer';
+        rc.buttonLabel = 'Proceed to exam';
+
+
         function nextQuizType() {
+            rc.changeLabels();
+
             if(rc.steps.review) {
-                rc.nextStep('testWelcome');
-            } else if(rc.steps.test) {
+                rc.nextStep('examWelcome');
+            } else if(rc.steps.exam) {
                 rc.nextStep('endQuiz');
             }
-
         }
 
+        function changeLabels() {
+            rc.screenLabel = 'Exam';
+            rc.buttonLabel = 'See results';
 
-        rc.resetTest = resetTest;
+            if(rc.steps.exam) {
+                rc.screenLabel = 'End';
+                rc.buttonLabel = 'Return to home';
+            }
+        }
+
+        rc.resetExam = resetExam;
 
         rc.init = init;
 
@@ -129,8 +160,8 @@ angular.module('rApp', []);
         function nextQuestion() {
             if(rc.steps.review) {
                 rc.saveCurrentAnswer('review');
-            } else if(rc.steps.test) {
-                rc.saveCurrentAnswer('test');
+            } else if(rc.steps.exam) {
+                rc.saveCurrentAnswer('exam');
             }
 
             rc.currentQuestionCount++;
@@ -154,7 +185,7 @@ angular.module('rApp', []);
             if(quizType === "review") {
                 rc.userAnswers.reviewAnswers.push(rc.currentAnswer);
             } else {
-                rc.userAnswers.testAnswers.push(rc.currentAnswer);
+                rc.userAnswers.examAnswers.push(rc.currentAnswer);
             }
         }
 
@@ -184,8 +215,8 @@ angular.module('rApp', []);
                 currentQuizType = rc.userAnswers.reviewAnswers;
                 currentTotalScore = "reviewTotalScore";
             } else {
-                currentQuizType = rc.userAnswers.testAnswers;
-                currentTotalScore = "testTotalScore";
+                currentQuizType = rc.userAnswers.examAnswers;
+                currentTotalScore = "examTotalScore";
             }
 
             currentQuizType.forEach(function (item, index) {
@@ -197,7 +228,18 @@ angular.module('rApp', []);
         }
 
         function getQuestion(item) {
-            return rc.questions.items[item.questionOrder].question;
+            let question = '<p class="question-summary">' + rc.questions.items[item.questionOrder].question + '</p>';
+
+            let extraDetails = rc.questions.items[item.questionOrder].extraDetails;
+            let extraDetailsLength = rc.questions.items[item.questionOrder].extraDetails.length;
+            let extraDetailsHTML = '';
+
+            for(let x = 0; x < extraDetailsLength; x++) {
+                extraDetailsHTML = extraDetailsHTML + '<p class="extra-detail">' + extraDetails[x] + '</p>';
+            }
+
+
+            return $sce.trustAsHtml(question + extraDetailsHTML);
         }
 
         function getUserAnswerText(item) {
@@ -236,7 +278,11 @@ angular.module('rApp', []);
 
             questionItemsCopy.forEach(function (item, index) {
                 let tempOptions = item.options;
-                questionItemsCopy[index].options = shuffle(tempOptions);
+
+                // check if options only have "true or false"
+                if(tempOptions.length > 2) {
+                    questionItemsCopy[index].options = shuffle(tempOptions);
+                }
             });
 
             rc.questions.items = shuffle(questionItemsCopy);
@@ -328,15 +374,15 @@ angular.module('rApp', []);
 
 
 
-        function resetTest(setQuizTo) {
+        function resetExam(setQuizTo) {
 
 
             switch (setQuizTo) {
-                case 'test':
+                case 'exam':
                     rc.currentQuestionCount = 0;
                     rc.totalScore = 0;
                     rc.init(false);
-                    rc.nextStep('test');
+                    rc.nextStep('exam');
                     break;
             }
 
@@ -353,7 +399,10 @@ angular.module('rApp', []);
         }
 
 
-        rc.getQuestionsJSON();
+        $scope.$watch('rc.examType', function(newVal, oldVal) {
+            rc.getQuestionsJSON();
+        });
+
 
     }
 })();

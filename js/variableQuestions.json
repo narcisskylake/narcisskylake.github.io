@@ -1,7 +1,7 @@
 {
   "items": [
     {
-      "question": "A single premium policy means a policy:\n",
+      "question": "VARIABLE: A single premium policy means a policy:\n",
       "extraDetails": [
         "I. An improvement in their financial position",
         "II. A less comfortable standard of living",
@@ -26,7 +26,7 @@
       "answer": "b"
     },
     {
-      "question": "Which of the following funds is comprised of a higher proportion of equity and a lower proportion of fixed-income",
+      "question": "VARIABLE: Which of the following funds is comprised of a higher proportion of equity and a lower proportion of fixed-income",
       "extraDetails": [],
       "options": [
         {
@@ -46,7 +46,7 @@
       "answer": "c"
     },
     {
-      "question": "Which of the following are the main characteristics of Variable Life insurance policies?",
+      "question": "VARIABLE: Which of the following are the main characteristics of Variable Life insurance policies?",
       "extraDetails": [
         "I. The policies can be used for investments, as a source of regular savings and protection.",
         "II. The withdrawal and protection benefit are determined by the investment performance of the underlying",
@@ -70,7 +70,7 @@
       "answer": "c"
     },
     {
-      "question": "Which of the following statements are FALSE?",
+      "question": "VARIABLE: Which of the following statements are FALSE?",
       "extraDetails": [
         "I. The policyowners may request a partial withdrawal of the policy and the amount will be met by cashing the units at the offer price.",
         "II. The structure of charges and the investment content of a Variable Life policy are specified in the policy document and the policy statement.",
@@ -95,7 +95,7 @@
       "answer": "b"
     },
     {
-      "question": "Which of the following statements about the feature of Regular Premium Variable Life Policy are TRUE?",
+      "question": "VARIABLE: Which of the following statements about the feature of Regular Premium Variable Life Policy are TRUE?",
       "extraDetails": [
         "I. Top-ups are usually allowed.",
         "II. The level of coverage can be varied.",
