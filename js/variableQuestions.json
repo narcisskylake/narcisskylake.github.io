@@ -1,122 +1,1258 @@
 {
   "items": [
     {
-      "question": "VARIABLE: A single premium policy means a policy:\n",
-      "extraDetails": [
-        "I. An improvement in their financial position",
-        "II. A less comfortable standard of living",
-        "III. Retirement income",
-        "IV. Funds for paying necessary expenses and taxes when the person dies"
-      ],
-      "options": [
-        {
-          "key" : "a",
-          "value" : "I, II and III"
-        },{
-          "key" : "b",
-          "value" : "I, III and IV"
-        },{
-          "key" : "c",
-          "value" : "I, II and IV"
-        },{
-          "key" : "d",
-          "value" : "II, III and IV"
-        }
-      ],
-      "answer": "b"
-    },
-    {
-      "question": "VARIABLE: Which of the following funds is comprised of a higher proportion of equity and a lower proportion of fixed-income",
+      "question": "Variable  life insurance policy owners may make withdrawals in terms of\n",
       "extraDetails": [],
       "options": [
         {
           "key" : "a",
-          "value" : "Bond Funds"
+          "value" : "Number of units or fixed monetary amount through cancellation of units\n"
         },{
           "key" : "b",
-          "value" : "Cash Funds"
+          "value" : "Number of units of fixed monetary through reduction of the life cover sum assured\n"
         },{
           "key" : "c",
-          "value" : "Managed Funds"
+          "value" : "Fixed monetary amount only through reduction of the life cover sum assured"
         },{
           "key" : "d",
-          "value" : "Mixed Funds"
+          "value" : "Number of units through cancellation of units."
         }
       ],
-      "answer": "c"
+      "answer": "d"
     },
     {
-      "question": "VARIABLE: Which of the following are the main characteristics of Variable Life insurance policies?",
-      "extraDetails": [
-        "I. The policies can be used for investments, as a source of regular savings and protection.",
-        "II. The withdrawal and protection benefit are determined by the investment performance of the underlying",
-        "III. The net withdrawal values of the policies are the gross withdrawal values shown in the policy which"
-      ],
+      "question": "Which of the following statements about flexibility features of the variable life policies is false?",
+      "extraDetails": [],
       "options": [
         {
           "key" : "a",
-          "value" : "I only"
+          "value" : "Policyholders may request for a partial withdrawal of the policy and the withdrawal amount will be met cashing the units at the bid price"
         },{
           "key" : "b",
-          "value" : "II only"
+          "value" : "Policyholders can take loans against their variable life up to the entire withdrawal value of their policies"
         },{
           "key" : "c",
-          "value" : "I and II only"
+          "value" : "Policyholders have the flexibility of switching from one find to another provided it satisfies the company’s switching criteria"
         },{
           "key" : "d",
-          "value" : "I, II and III"
-        }
-      ],
-      "answer": "c"
-    },
-    {
-      "question": "VARIABLE: Which of the following statements are FALSE?",
-      "extraDetails": [
-        "I. The policyowners may request a partial withdrawal of the policy and the amount will be met by cashing the units at the offer price.",
-        "II. The structure of charges and the investment content of a Variable Life policy are specified in the policy document and the policy statement.",
-        "III. Some Variable Life policies grant loans to policyowners which is limited to a percentage of the cash value.",
-        "IV. Commissions and office expenses are met by a variety of implicit charges, some of which are variable."
-      ],
-      "options": [
-        {
-          "key" : "a",
-          "value" : "I and II only"
-        },{
-          "key" : "b",
-          "value" : "I and III only"
-        },{
-          "key" : "c",
-          "value" : "II and III only"
-        },{
-          "key" : "d",
-          "value" : "All of the above"
+          "value" : "Policyholders have the flexibility of increasing or decreasing their premiums for regular premium variable life policies"
         }
       ],
       "answer": "b"
     },
     {
-      "question": "VARIABLE: Which of the following statements about the feature of Regular Premium Variable Life Policy are TRUE?",
+      "question": "The investment returns under variable life insurance policy ________",
       "extraDetails": [
-        "I. Top-ups are usually allowed.",
-        "II. The level of coverage can be varied.",
-        "III. Premium holidays are usually allowed."
+        "I. Are not guaranteed",
+        "II. Are assured",
+        "III. Are tinked to the performance to of the investment fund managed by the life insurance company",
+        "IV. Fluctuate according to the rise and fall of market prices"
       ],
       "options": [
         {
           "key" : "a",
-          "value" : "I and II only"
+          "value" : "I, II and III"
         },{
           "key" : "b",
-          "value" : "I and III only"
+          "value" : "I, II and IV"
         },{
           "key" : "c",
-          "value" : "II and III only"
+          "value" : "I,III and IV"
         },{
           "key" : "d",
-          "value" : "I, II and III"
+          "value" : "II,III and IV"
+        }
+      ],
+      "answer": "c"
+    },
+    {
+      "question": "Which of the following statements is TRUE?",
+      "extraDetails": [
+        "I. The policy value of variable life policies is determined by the offer price at the time of valuation",
+        "II. The policy value of endowment policies is the cash value plus any accumulated dividends less any outstanding loans due at the time of the surrender",
+        "III. The life company needs to maintain a separate account for variable life policies distinct from the general account"
+      ],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "I & II"
+        },{
+          "key" : "b",
+          "value" : "I, II & III"
+        },{
+          "key" : "c",
+          "value" : "I & III"
         }
       ],
       "answer": "d"
+    },
+    {
+      "question": "Which of the following statements is FALSE?",
+      "extraDetails": [],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "Rebating is to offer a prospect a special inducement to purchase a policy"
+        },{
+          "key" : "b",
+          "value" : "Twisting specific form of misrepresentation"
+        },{
+          "key" : "c",
+          "value" : "Misrepresentation is a specific form of twisting"
+        },{
+          "key" : "d",
+          "value" : "Switching is a facility allowing the policyholders to switch to another variable life funds offered by the company"
+        }
+      ],
+      "answer": "c"
+    },
+    {
+      "question": "Which of the following statements about policies is TRUE?",
+      "extraDetails": [
+        "I. Offer price is used to determine the number of units to be credited to the account",
+        "II. The margin between the bid and offer price is used to cover the management cost of the policy",
+        "III. The policy value calculated based on the bid price of units allocated into the policy"
+      ],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "I, II and III"
+        },{
+          "key" : "b",
+          "value" : "I & II"
+        },{
+          "key" : "c",
+          "value" : "I & III"
+        },{
+          "key" : "d",
+          "value" : "II & III"
+        }
+      ],
+      "answer": "d"
+    },
+    {
+      "question": "What is the most suitable investment instrument for investors who are interested in protecting his principal and receiving a steady stream of income?",
+      "extraDetails": [],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "Equities"
+        },{
+          "key" : "b",
+          "value" : "Warrants"
+        },{
+          "key" : "c",
+          "value" : "Variable life policies"
+        },{
+          "key" : "d",
+          "value" : "Fixes income securities"
+        }
+      ],
+      "answer": "d"
+    },
+    {
+      "question": "What are the disadvantages of investing in common shares?",
+      "extraDetails": [
+        "I. Dividends are paid more than fixed rates",
+        "II. Investors are exposed to market and specific risks",
+        "III. Shares can become worthless if company becomes insolvent"
+      ],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "I & II"
+        },{
+          "key" : "b",
+          "value" : "III"
+        },{
+          "key" : "c",
+          "value" : "II &III"
+        },{
+          "key" : "d",
+          "value" : "I, II & III"
+        }
+      ],
+      "answer": "c"
+    },
+    {
+      "question": "Which of the following statements about the difference between variable life policies and endowment policies are FALSE?",
+      "extraDetails": [
+        "I. The policies  values of variable life policies directly reflect the performance of the fund of the life company",
+        "II. The premiums and benefits of the endowment policies are described at the inception of the policy whereas variable life are flexible as they are account driven.",
+        "III. The benefits and risks of variable life and endowment policies directly accrue to the policyholders."
+      ],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "I & II"
+        },{
+          "key" : "b",
+          "value" : "I, II & III"
+        },{
+          "key" : "c",
+          "value" : "I & III"
+        },{
+          "key" : "d",
+          "value" : "II & III"
+        }
+      ],
+      "answer": "d"
+    },
+    {
+      "question": "Which of the following statements about twisting is FALSE?",
+      "extraDetails": [],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "Twisting is a special form of misrepresentation"
+        },{
+          "key" : "b",
+          "value" : "It refers to an agent persuading a policyholder to discontinue policy with another company without disclosing the disadvantage of doing so."
+        },{
+          "key" : "c",
+          "value" : "It includes misleading or incomplete comparison of policies"
+        },{
+          "key" : "d",
+          "value" : "It refers to an agent offering a prospect a special inducement to purchase a policy"
+        }
+      ],
+      "answer": "d"
+    },
+    {
+      "question": "Mr. Juan dela Cruz is currently earning Php 30,000.00 per month. He is 35 years old and he has a reasonable amount of savings. He has a moderate level of risk tolerance. What kind of policy would you recommend for him to buy?",
+      "extraDetails": [],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "Participating Endowment"
+        },{
+          "key" : "b",
+          "value" : "Variable life policies"
+        },{
+          "key" : "c",
+          "value" : "Participating whole life"
+        },{
+          "key" : "d",
+          "value" : "Annuities"
+        }
+      ],
+      "answer": "c"
+    },
+    {
+      "question": "What are the benefits available when investing in funds?",
+      "extraDetails": [
+        "I. The variable life funds offer policyholder an access to pooled-or-diversified portfolios",
+        "II. The variable life policyholders can vary his premium payments, take premium holidays, add single premium top-ups and change level of the sum assured easily",
+        "III. The variable life policyholder can have access to pool of qualified and trained professional fund managers"
+      ],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "I & II"
+        },{
+          "key" : "b",
+          "value" : "I & III"
+        },{
+          "key" : "c",
+          "value" : "I, II & III"
+        },{
+          "key" : "d",
+          "value" : "II & III"
+        }
+      ],
+      "answer": "a"
+    },
+    {
+      "question": "Rank the following in terms of their liquidity, from the least liquid to the most liquid:",
+      "extraDetails": [
+        "I. Short term securities",
+        "II. Property",
+        "III. Cash",
+        "IV. Equities"
+      ],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "IV,II,III,I"
+        },{
+          "key" : "b",
+          "value" : "III,I,IV,II"
+        },{
+          "key" : "c",
+          "value" : "II,I,IV,III"
+        },{
+          "key" : "d",
+          "value" : "II,IV,I,III"
+        }
+      ],
+      "answer": "c"
+    },
+    {
+      "question": "A unit trust is __________",
+      "extraDetails": [],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "Established by a trust deed which enables a trustee to hold’ the pool of money and assets in trust in behalf of the investor"
+        },{
+          "key" : "b",
+          "value" : "A close-end fund and does not have to dispose off if the large number investors sell their shares"
+        },{
+          "key" : "c",
+          "value" : "One whereby the investors buys units in the trust itself and not share in the company"
+        },{
+          "key" : "d",
+          "value" : "An organization registered under the SECURITY EXCHANGE COMMISSION (SEC) which usually invests in a wide range of equities and other investment"
+        }
+      ],
+      "answer": "a"
+    },
+    {
+      "question": "Under variable life: life insurance policies ___________",
+      "extraDetails": [
+        "I. There is no guaranteed minimum sum assured for the purpose of declaring dividends",
+        "II. There is no guaranteed minimum sum assured as a level of life insurance protection",
+        "III. Each of the policy owner’s premium will be used to purchase units the number of which is dependent on the selling price of each unit",
+        "IV. Purchase of units can only be made from the variable life fund itself, which will then create new units and add investment monies to the value of the fund."
+      ],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "I & IV"
+        },{
+          "key" : "b",
+          "value" : "II & IV"
+        },{
+          "key" : "c",
+          "value" : "III & IV"
+        },{
+          "key" : "d",
+          "value" : "II & III"
+        }
+      ],
+      "answer": "c"
+    },
+    {
+      "question": "The benefits of investing in variable life funds include",
+      "extraDetails": [
+        "I. Policy owners have access to pooled or diversified portfolios of investment",
+        "II. Policy owners can easily change the level of the premium payments as the product design of variable life policies have clear structures which cater separately for investment and insurance protection",
+        "III. Policy owners can gain access to variable life funds managed by professional investment managers with proven track records",
+        "IV. Policy owners can buy a variable life insurance policy only with a high initial investment"
+      ],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "I, II & IV"
+        },{
+          "key" : "b",
+          "value" : "I, III & IV"
+        },{
+          "key" : "c",
+          "value" : "I, II & III"
+        },{
+          "key" : "d",
+          "value" : "II, III & IV"
+        }
+      ],
+      "answer": "c"
+    },
+    {
+      "question": "Which of the following BEST describes the policy benefits of policies?",
+      "extraDetails": [],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "The policy benefits are payable only on death or disability"
+        },{
+          "key" : "b",
+          "value" : "The policy benefits will depend on the long-term performance of the life company"
+        },{
+          "key" : "c",
+          "value" : "The policy benefits are directly linked to the investment performance of the underlying assets"
+        },{
+          "key" : "d",
+          "value" : "The policy benefits are guaranteed"
+        }
+      ],
+      "answer": "c"
+    },
+    {
+      "question": "Why is it important that the customer must understand the sales proposal in full?",
+      "extraDetails": [],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "Because the insurer does not guarantee any return"
+        },{
+          "key" : "b",
+          "value" : "Because the impact of the changes in investment condition on variable life policy is borne solely by the costumer"
+        },{
+          "key" : "c",
+          "value" : "Because the agent may give the wrong recommendations"
+        },{
+          "key" : "d",
+          "value" : "Because the policyholder expects higher returns"
+        }
+      ],
+      "answer": "b"
+    },
+    {
+      "question": "Which of the following statements about rebating are TRUE?",
+      "extraDetails": [
+        "I. Rebating is prohibited under the insurance Code",
+        "II. Rebating deals with offering the prospect a special inducement to purchase a policy",
+        "III. Rebating will enhance the sales performance and uphold the prestige of an agent"
+      ],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "I & II"
+        },{
+          "key" : "b",
+          "value" : "I & III"
+        },{
+          "key" : "c",
+          "value" : "II & III"
+        }
+      ],
+      "answer": "a"
+    },
+    {
+      "question": "Which one of the following statements is FALSE?",
+      "extraDetails": [],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "Variable life insurance policies offer investors policies with values and indirectly linked to the investment performance of the life company"
+        },{
+          "key" : "b",
+          "value" : "Life Company will carry out a valuation of its funds yearly and any surplus may be allocated to participating policyholder as cash dividends."
+        },{
+          "key" : "c",
+          "value" : "Both whole life and endowment policies can be used as an investment media with benefits that become payable at a future date."
+        },{
+          "key" : "d",
+          "value" : "The investment element of variable of variable life policies varies according  to underlying assets of the portfolio"
+        }
+      ],
+      "answer": "a"
+    },
+    {
+      "question": "Which of the following statements about option top-up under variable life insurance is FALSE?",
+      "extraDetails": [],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "Policy owners may buy additional units of the variable life fund and these units will be allocated to new variable life insurance policies "
+        },{
+          "key" : "b",
+          "value" : "Further premiums at time of the top-up will be used in full, after deducting charges for top-ups, to purchase additional units of the variable life funds"
+        },{
+          "key" : "c",
+          "value" : "Top-up policy, the policy owner pays further single premium at  the time of the top-up"
+        },{
+          "key" : "d",
+          "value" : "Policy owner are normally allowed to top-up their policies at any time, subject to a minimum amount"
+        }
+      ],
+      "answer": "a"
+    },
+    {
+      "question": "The characteristics of a variable life insurance include _________",
+      "extraDetails": [
+        "I. Its withdrawal value and protection benefits are determined by the investment performance of the underlying assets",
+        "II. Its protection costs are generally met by implicit charges",
+        "III. Its commission and company expenses are met by a variety of  explicit charges with normally  6 months’ notice given by the life companies prior to any",
+        "IV. Its withdrawal value is normally the value of units allocated to the policy owner calculated at the bid price"
+      ],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "I, II & III"
+        },{
+          "key" : "b",
+          "value" : "II, III & IV"
+        },{
+          "key" : "c",
+          "value" : "I, II & IV"
+        },{
+          "key" : "d",
+          "value" : "I, III & IV"
+        }
+      ],
+      "answer": "d"
+    },
+    {
+      "question": "Which of the following statements about single premium variable life policies are TRUE?",
+      "extraDetails": [
+        "I. There is no fixed-term in a single premium variable life policy and therefore, lit is technically a whole life insurance",
+        "II. Top-ups or single premium injections are allowed in these plans",
+        "III. Policyholders have the flexibility of varying the level cover"
+      ],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "I,II & III"
+        },{
+          "key" : "b",
+          "value" : "II & III"
+        },{
+          "key" : "c",
+          "value" : "I & II"
+        },{
+          "key" : "d",
+          "value" : "II & III"
+        }
+      ],
+      "answer": "c"
+    },
+    {
+      "question": "Investing in bonds offer the following EXCEPT?",
+      "extraDetails": [],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "Must be issued with a minimum death benefit"
+        },{
+          "key" : "b",
+          "value" : "Must be issued with a maximum withdrawal value"
+        },{
+          "key" : "c",
+          "value" : "It allows the investor a chance for capital preservation"
+        },{
+          "key" : "d",
+          "value" : "It enables the investor an opportunity for capital appreciation"
+        }
+      ],
+      "answer": "d"
+    },
+    {
+      "question": "Which of the following statements about variable life policies are TRUE?",
+      "extraDetails": [
+        "I. The withdrawal value is not guaranteed",
+        "II. The volatility of the returns depends on the investment strategy of the funds",
+        "III. The variable life policyholder has direct control over the investment decision of the variable life funds"
+      ],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "I, II & III"
+        },{
+          "key" : "b",
+          "value" : "I & II"
+        },{
+          "key" : "c",
+          "value" : "I & III"
+        },{
+          "key" : "d",
+          "value" : "II & III"
+        }
+      ],
+      "answer": "b"
+    },
+    {
+      "question": "Single premium variable life insurance policy:",
+      "extraDetails": [],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "Must be issued with a minimum death benefit"
+        },{
+          "key" : "b",
+          "value" : "Must be issued with a maximum withdrawal value"
+        },{
+          "key" : "c",
+          "value" : "Has no death benefit"
+        },{
+          "key" : "d",
+          "value" : "Has no withdrawal value"
+        }
+      ],
+      "answer": "a"
+    },
+    {
+      "question": "Which of the following statements about characteristics of variable life policies are TRUE?",
+      "extraDetails": [
+        "I. Variable policies generally have a linger exposure to equity investment than with participating and other traditional policies",
+        "II. The protection costs are generally met by implicit charges, which vary with age and level of cover",
+        "III. The commission and company expenses are met by a variety of explicit charges, some of which are variable."
+      ],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "I, II & III"
+        },{
+          "key" : "b",
+          "value" : "I & II"
+        },{
+          "key" : "c",
+          "value" : "II & III"
+        },{
+          "key" : "d",
+          "value" : "I & III"
+        }
+      ],
+      "answer": "d"
+    },
+    {
+      "question": "Which of the following statements about benefits in variable life funds is FALSE?",
+      "extraDetails": [],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "The fund provides a highly diversified portfolio, thus, lowering the risk of investment"
+        },{
+          "key" : "b",
+          "value" : "The fund ensures definite high yield for an investors since it is managed by professionals who are well-versed in the management of risk of investment portfolios"
+        },{
+          "key" : "c",
+          "value" : "The funds relieves the investors from the hassle of administrating his/her investment"
+        },{
+          "key" : "d",
+          "value" : "The fund enables small investors to participate in a pool of diversified portfolio in which he/she, with a low investment capital, is likely to have acceded to."
+        }
+      ],
+      "answer": "b"
+    },
+    {
+      "question": "The flexibility benefits of investing in variable life funds include __________",
+      "extraDetails": [
+        "I. Policy owners can easily change the level of sum assured and switch their investment between funds",
+        "II. Policy owners can easily take premium holidays and single premium to top-ups",
+        "III. Variable life insurance policies offer the potential for higher returns",
+        "IV. Traditional participating policies aim to produce a steady return by smoothing out market fluctuation"
+      ],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "All of the above"
+        },{
+          "key" : "b",
+          "value" : "I , II & III"
+        },{
+          "key" : "c",
+          "value" : "I, II & IV"
+        },{
+          "key" : "d",
+          "value" : "I, III & IV"
+        }
+      ],
+      "answer": "b"
+    },
+    {
+      "question": "The fundamental differences between traditional participating life insurance policies and variable life insurance policies include",
+      "extraDetails": [
+        "I. Variable life insurance policies are less likely to offer more choices in terms of the type of investment funds",
+        "II. The investment elements of variable life insurance policies is made known to the policy owner at the outset and is invested in a separately identifiable fund which is made up of units of investment",
+        "III. Variable life insurance policies offer the potential for higher returns",
+        "IV. Traditional participating policies aim to produce a steady return by smoothing out market fluctuation"
+      ],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "I, II & IV"
+        },{
+          "key" : "b",
+          "value" : "II , III & IV"
+        },{
+          "key" : "c",
+          "value" : "I, II & III"
+        },{
+          "key" : "d",
+          "value" : "I, II & IV"
+        }
+      ],
+      "answer": "b"
+    },
+    {
+      "question": "The switching facility under variable life insurance policies is very useful",
+      "extraDetails": [],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "For the purpose of profit planning by the life policies"
+        },{
+          "key" : "b",
+          "value" : "For the purpose of profit planning by the life policies"
+        },{
+          "key" : "c",
+          "value" : "For the purpose of sales planning by the fund managers"
+        },{
+          "key" : "d",
+          "value" : "For the purpose of financial planning by the policy owners"
+        }
+      ],
+      "answer": "d"
+    },
+    {
+      "question": "Which of the following statements about surrender value under traditional participating life insurance products are TRUE?",
+      "extraDetails": [],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "Cash value is paid when yearly renewable term insurance policy is surrender"
+        },{
+          "key" : "b",
+          "value" : "When a participating insurance policy is surrendered, the surrender value is calculated by multiplying the bid price with the number of units"
+        },{
+          "key" : "c",
+          "value" : "The amount of surrender value is usually higher than the amount under non-participating policies and it varies with the age of the assured, being lower at older ages"
+        },{
+          "key" : "d",
+          "value" : "In the case of participating policies, the net cash surrender value includes the surrender value of the paid- up addition up to the date of surrender"
+        }
+      ],
+      "answer": "c"
+    },
+    {
+      "question": "Which one of the following statements about risks of investing in variable life funds is TRUE?",
+      "extraDetails": [],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "Policy owners who are risk averse should buy life insurance policies with high equity investment"
+        },{
+          "key" : "b",
+          "value" : "Investment in variable life funds which are fully invested in units of equity bonds are not suitable for policy owners who can tolerate the risks of short term fluctuation in their cash value"
+        },{
+          "key" : "c",
+          "value" : "Policy owners who invest in variable life funds with high equity investment face higher risk but can expect to achieve higher return than the traditional life insurance product over the long term"
+        },{
+          "key" : "d",
+          "value" : "Policy owners who are risk averse should not purchase life insurance policies with high protection and guaranteed cash and maturity values"
+        }
+      ],
+      "answer": "c"
+    },
+    {
+      "question": "What should be the withdrawal values after a year?",
+      "extraDetails": [
+        "Offer price                  PHP 16",
+        "Bid –offer Spread            4.5%",
+        "Number of units bought       25000",
+        "Admin and Mortality Charge   8,750",
+        "Top-up Fee                   700",
+        "Admin for Top-up             2000",
+        " ",
+        "Sum assured is 190% of single premium or the value of units, whichever is higher",
+        "",
+        "ASSUMPTIONS:",
+        "1. Charges and fees are deducted after the single premium has been invested into the account",
+        "2. The growth of the unit price and bid-offer spread is maintained at 8% and 4.5% respectively."
+      ],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "Php 432,000.00"
+        },{
+          "key" : "b",
+          "value" : "Php 420,069.20"
+        },{
+          "key" : "c",
+          "value" : "Php 401,107.58"
+        },{
+          "key" : "d",
+          "value" : "Php 412, 500.00"
+        }
+      ],
+      "answer": "c"
+    },
+    {
+      "question": "The protection cost under a variable life insurance policy _________",
+      "extraDetails": [
+        "I. Are met by flat initial charges for regular premium plans",
+        "II. Are generally covered by cancellation of units in the fund",
+        "III. Are generally met by explicit charges stipulated openly in the policy terms",
+        "IV. Vary with age of policy owner and level of cover"
+      ],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "I, II & III"
+        },{
+          "key" : "b",
+          "value" : "I, II & IV"
+        },{
+          "key" : "c",
+          "value" : "I, III, & IV"
+        },{
+          "key" : "d",
+          "value" : "II, III, & IV"
+        }
+      ],
+      "answer": "d"
+    },
+    {
+      "question": "Which of the following statements about diversification in portfolio management is FALSE?",
+      "extraDetails": [],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "A diversified portfolio provides greater security to an investor having to sacrifice return for the portfolio"
+        },{
+          "key" : "b",
+          "value" : "Diversification can completely eliminate the risk of investing in stocks in portfolio"
+        },{
+          "key" : "c",
+          "value" : "Diversification can involve purchasing different types of stocks and investing stocks in different countries"
+        },{
+          "key" : "d",
+          "value" : "Diversification helps to spread the portfolio risk by investing in different categories of investment in a portfolio"
+        }
+      ],
+      "answer": "b"
+    },
+    {
+      "question": "What are the advantages of investing in preferred shares?",
+      "extraDetails": [
+        "I. It gives shareholders the right to affixed dividend",
+        "II. Has the priority over company assets during a dissolution",
+        "III. They enjoy benefit of capital appreciation"
+      ],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "I, II & III"
+        },{
+          "key" : "b",
+          "value" : "I, II"
+        },{
+          "key" : "c",
+          "value" : "I, III"
+        },{
+          "key" : "d",
+          "value" : "II, III"
+        }
+      ],
+      "answer": "a"
+    },
+    {
+      "question": "With traditional participating life insurance products, the allocations to policy owners in the form of dividends_________",
+      "extraDetails": [
+        "I. Are not directly linked to the company’s investment performance",
+        "II. Have already been smoothed by the life company",
+        "III. Do not have the highs and lows of investment return as in good investment  years of life company",
+        "IV. Are not fixed at the inception of the policy, but are greatly dependent on the investment performance of the company"
+      ],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "I, II & III"
+        },{
+          "key" : "b",
+          "value" : "I, II & IV"
+        },{
+          "key" : "c",
+          "value" : "I, III & IV"
+        },{
+          "key" : "d",
+          "value" : "II, III & I"
+        }
+      ],
+      "answer": "a"
+    },
+    {
+      "question": "The objective of satisfying customers need profitably can be achieved by and agent through",
+      "extraDetails": [
+        "I. The giving of freebies  to the customers",
+        "II. Extensive investment training by the company",
+        "III. The use of sales plan, where sales goals , strategies , and objectives are coordinated with the market analysis, segmentation and training",
+        "IV. The giving of monetary assistance and discount to the customers"
+      ],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "I & III"
+        },{
+          "key" : "b",
+          "value" : "II & III"
+        },{
+          "key" : "c",
+          "value" : "II & IV"
+        },{
+          "key" : "d",
+          "value" : "II, III & IV"
+        }
+      ],
+      "answer": "b"
+    },
+    {
+      "question": "Which of the statements is true about CASH?",
+      "extraDetails": [],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "It has a high yield potential"
+        },{
+          "key" : "b",
+          "value" : "Amount invested cash depends on size of the cash flow requirement"
+        },{
+          "key" : "c",
+          "value" : "Investment in cash increase when there is a bull run  in the stock market"
+        },{
+          "key" : "d",
+          "value" : "Investment in cash decrease when interest rates rise"
+        }
+      ],
+      "answer": "b"
+    },
+    {
+      "question": "Under a regular premium  variable whole life plan _________",
+      "extraDetails": [
+        "I. Premium top-ups and holidays , subject to the company’s administrative rules are usually allowed",
+        "II. Life protection is the main objective of the plan with investment as the nominal purpose",
+        "III. Withdrawals after the payment of a few years premium are usually allowed",
+        "IV. A single premium contributions is made to the policy which uses the premium to purchase units in a variable life fund to provide a certain level of life cover"
+      ],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "II, III, & IV"
+        },{
+          "key" : "b",
+          "value" : "I, III & IV"
+        },{
+          "key" : "c",
+          "value" : "I, II & III"
+        }
+      ],
+      "answer": "d"
+    },
+    {
+      "question": "Which of the following statement about investment objectives ‘ is false?",
+      "extraDetails": [],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "People invest money in fixed deposits to produce high and guaranteed returns"
+        },{
+          "key" : "b",
+          "value" : "People invest money to enhance  a comfortable standard of living"
+        },{
+          "key" : "c",
+          "value" : "People invest money to provide funds for higher education for their children"
+        },{
+          "key" : "d",
+          "value" : "Investment in commodities has no regular income"
+        }
+      ],
+      "answer": "a"
+    },
+    {
+      "question": "Which of the following is/are the main characteristic(s) of variable life policies?",
+      "extraDetails": [
+        "I. The policies can be used for investments, as a source of regular savings and protection",
+        "II. The withdrawal values and protection benefits are determined by the investment",
+        "III. The net cash values of the policies are the gross cash values shown in the policy that includes dividends up to the date of surrender less and indebtedness including interest"
+      ],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "II"
+        },{
+          "key" : "b",
+          "value" : "I"
+        },{
+          "key" : "c",
+          "value" : "I, II & III"
+        },{
+          "key" : "d",
+          "value" : "I & II"
+        }
+      ],
+      "answer": "d"
+    },
+    {
+      "question": "Risk can be classified into two particular categories in relation to investment. They include ________",
+      "extraDetails": [
+        "I. The risk of not losing some  or all of the person’s initial investment",
+        "II. The risk of rate of return on the investment not matching up to the individual’s expectation",
+        "III. The risk of rate of return on the investment matching up to the individual expectation",
+        "IV. The risk  of losing some or all of a person’s initial investment"
+      ],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "I & III"
+        },{
+          "key" : "b",
+          "value" : "I & II"
+        },{
+          "key" : "c",
+          "value" : "III & IV"
+        },{
+          "key" : "d",
+          "value" : "II & IV"
+        }
+      ],
+      "answer": "d"
+    },
+    {
+      "question": "The duties of the trustee of unit do not include:",
+      "extraDetails": [],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "Managing the portfolio or investment and administrating the buying and selling of shares in the unit trust itself"
+        },{
+          "key" : "b",
+          "value" : "Ensuring that the fund manager adheres to the provision of the trust deeds"
+        },{
+          "key" : "c",
+          "value" : "Acting generally to protect the unit-holders"
+        },{
+          "key" : "d",
+          "value" : "Holding the proof of money and assets in trust in behalf of the investors"
+        }
+      ],
+      "answer": "a"
+    },
+    {
+      "question": "Policy fee payable by variable life insurance policy owner is to cover _________",
+      "extraDetails": [],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "The handling charges by professional investment managers"
+        },{
+          "key" : "b",
+          "value" : "The price of each unit bought under the variable life insurance policy"
+        },{
+          "key" : "c",
+          "value" : "The mortality costs of the variable life insurance policy"
+        },{
+          "key" : "d",
+          "value" : "The administrative expenses of setting up the variable life insurance policy"
+        }
+      ],
+      "answer": "d"
+    },
+    {
+      "question": "The selling price under a variable life insurance policy",
+      "extraDetails": [],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "The price at which units under the policy are bought back by the life insurance company"
+        },{
+          "key" : "b",
+          "value" : "The price at which units under the policy are offered for sale by the life company"
+        },{
+          "key" : "c",
+          "value" : "Also known as the bid price"
+        },{
+          "key" : "d",
+          "value" : "A fixed amount throughout the life of the policy"
+        }
+      ],
+      "answer": "b"
+    },
+    {
+      "question": "Diversification in investment involves _________",
+      "extraDetails": [],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "Putting all the funds under management into one category of investment"
+        },{
+          "key" : "b",
+          "value" : "Spreading the risks of the investment by not putting the fund into several categories of investment"
+        },{
+          "key" : "c",
+          "value" : "Reducing the risks of investment by putting one fund under management into several categories of investment"
+        },{
+          "key" : "d",
+          "value" : "Reducing the risks of investing by putting all one’s eggs in one basket"
+        }
+      ],
+      "answer": "c"
+    },
+    {
+      "question": "Variable life funds can be invested in any financial instruments including cash funds, bond funds, equity funds, property funds, specialized funds, and diversified funds. Equity funds ________",
+      "extraDetails": [],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "Invest in shares of stocks and the magnitude of the change in unit prices will only depend on the quantity of the equities held"
+        },{
+          "key" : "b",
+          "value" : "Invest in shares of stocks and during market recession, such as assets are usually the last to depreciate"
+        },{
+          "key" : "c",
+          "value" : "Invest in shares of stocks which are inherently of lower risk in nature and the prices of stocks are stable"
+        },{
+          "key" : "d",
+          "value" : "Invest in shares of stocks and investors who buy such assets usually aim for capital appreciation"
+        }
+      ],
+      "answer": "d"
+    },
+    {
+      "question": "Which of the following statement describe the difference between variable life products and participating products?",
+      "extraDetails": [
+        "I. Variable life products allow policyholders to vary the premium payment unlike participating products",
+        "II. Variable life products can take the form of whole life or endowment policies with participating products",
+        "III. Variable  life products allow policyholders to pay future single premium from the time to time to add more units to his account unlike participating products"
+      ],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "I, II & III"
+        },{
+          "key" : "b",
+          "value" : "I"
+        },{
+          "key" : "c",
+          "value" : "I & III"
+        },{
+          "key" : "d",
+          "value" : "II & III"
+        }
+      ],
+      "answer": "a"
+    },
+    {
+      "question": "Assuming no movement in the prices and charges/ fees are deducted after the single premium has been invested into the account, how much will the policyholder lose if he surrender the policy now?",
+      "extraDetails": [
+        "Bid price                      PHP 13.00",
+        "Bid-offer spread               4%",
+        "Single Premium                 PHP 450,000",
+        "Policy fee                     PHP 1,800",
+        "Admin and mortality charges    3%",
+        " ",
+        "Sum assured is 200% of single premium of the value of the units, which is higher:"
+      ],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "PHP 43,400.90"
+        },{
+          "key" : "b",
+          "value" : "PHP 33,246.78"
+        },{
+          "key" : "c",
+          "value" : "PHP 22,500.00"
+        },{
+          "key" : "d",
+          "value" : "PHP 15,299.96"
+        }
+      ],
+      "answer": "b"
+    },
+    {
+      "question": "Which of the following statements BEST describes \"variable life\" policies?",
+      "extraDetails": [],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "It is fixed premium policy with returns that will not vary with the underlying value of investments."
+        },{
+          "key" : "b",
+          "value" : "It is fixed premium policy with returns that will vary with the underlying value of investments."
+        },{
+          "key" : "c",
+          "value" : "It is a flexible premium policy with returns that will not vary with the underlying value of investments."
+        },{
+          "key" : "d",
+          "value" : "It is a flexible premium policy with returns that will vary with the underlying value of investments."
+        }
+      ],
+      "answer": "d"
+    },
+    {
+      "question": "Which of the following factors  contribute to the specific risk of an investment",
+      "extraDetails": [
+        "I. Rate of corporate taxers",
+        "II. Fraud by senior management",
+        "III. Financial leverage of the company"
+      ],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "I & II"
+        },{
+          "key" : "b",
+          "value" : "II & III"
+        },{
+          "key" : "c",
+          "value" : "I & III"
+        },{
+          "key" : "d",
+          "value" : "I, II & III"
+        }
+      ],
+      "answer": "b"
+    },
+    {
+      "question": "Investing in bonds offers the following advantages EXCEPT",
+      "extraDetails": [],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "It offers  protection to the principal and guaranteed steady of income"
+        },{
+          "key" : "b",
+          "value" : "It is a place of temporary refuge when the investor foresees that the market outlook is uncertain"
+        },{
+          "key" : "c",
+          "value" : "It allows the investors a chance for Capital preservation"
+        },{
+          "key" : "d",
+          "value" : "It enables the investors an opportunity for capital appreciation"
+        }
+      ],
+      "answer": "d"
+    },
+    {
+      "question": "Rank the following investment instruments in terms of their level of risks , from the least risky to the most risky",
+      "extraDetails": [
+        "I. Cash and deposit",
+        "II. Derivatives",
+        "III. A well-diversified investment portfolio of a company",
+        "IV. Stock options"
+      ],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "I, IV, III & II"
+        },{
+          "key" : "b",
+          "value" : "I, III, II"
+        },{
+          "key" : "c",
+          "value" : "I, IV , II, & III"
+        },{
+          "key" : "d",
+          "value" : "I, II, III & IV"
+        }
+      ],
+      "answer": "a"
+    },
+    {
+      "question": "In risk return profile of cash funds, bond funds, balanced funds, managed funds and equity funds, a risk return graph will show that _________",
+      "extraDetails": [
+        "I. Higher return normally comes with lower risk",
+        "II. Higher return normally comes with higher risk",
+        "III. At the top end of the graph are the equity funds",
+        "IV. The relatively risk less cash funds sit at the bottom end of the graph"
+      ],
+      "options": [
+        {
+          "key" : "a",
+          "value" : "----"
+        },{
+          "key" : "b",
+          "value" : "--------"
+        },{
+          "key" : "c",
+          "value" : "-------------"
+        },{
+          "key" : "d",
+          "value" : "------------------"
+        }
+      ],
+      "answer": "b"
     }
   ]
 }
