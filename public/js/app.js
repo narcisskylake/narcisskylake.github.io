@@ -162,6 +162,8 @@ angular.module('rApp', []);
 
 
         function nextQuestion() {
+            scrollToTop('top');
+
             if(rc.steps.review) {
                 rc.saveCurrentAnswer('review');
             } else if(rc.steps.exam) {
@@ -356,7 +358,9 @@ angular.module('rApp', []);
 
                     rc.highlightCorrectAnswer();
                 }
+
             }
+
         }
 
         function highlightCorrectAnswer() {
@@ -374,6 +378,16 @@ angular.module('rApp', []);
                 }
             }
 
+        }
+
+
+
+        function scrollToTop() {
+            var c = document.documentElement.scrollTop || document.body.scrollTop;
+            if (c > 0) {
+                window.requestAnimationFrame(scrollToTop);
+                window.scrollTo(0, c - c / 8);
+            }
         }
 
 

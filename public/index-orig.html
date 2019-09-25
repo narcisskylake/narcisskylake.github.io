@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Reviewer Prototype</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="ng-cloak" data-ng-app="rApp" data-ng-controller="ReviewerController as rc">
+
+<main>
+  <div class="container">
+    <div class="row my-5 d-flex justify-content-center">
+      <div class="col-sm-12 col-md-11 col-lg-9 card p-0">
+        <div class="card-header d-flex align-items-center justify-content-between">
+          <p class="screen-label m-0">{{rc.screenLabel}}</p>
+          <div data-ng-show="rc.steps.review || rc.steps.exam">
+            <span data-ng-hide="rc.isComplete();" class="badge badge-primary font-weight-normal">{{rc.currentQuestionCount + 1}} of {{rc.totalQuestionItems}}</span>
+            <span data-ng-show="rc.isComplete();" class="badge badge-success font-weight-normal">Completed</span>
+          </div>
+        </div>
+        <div id="training-body" class="card-body">
+          <div data-ng-show="rc.steps.reviewWelcome">
+
+            <div class="greetings">
+              <p class="m-0">Hello</p>
+              <h1 class="mb-4">{{rc.userInfo.name ? rc.userInfo.name + '.' : 'nobody'}}</h1>
+            </div>
+
+            <form data-ng-submit="rc.nextStep('review');">
+              <div class="col-sm-5 p-0">
+                <div class="form-group">
+                  <label for="name">Name:</label>
+                  <input data-ng-model="rc.userInfo.name" type="text" class="form-control" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                  <p class="mt-3">Choose exam type:</p>
+                  <div class="custom-control custom-radio my-2">
+                    <input type="radio" name="examType" id="varExam" class="custom-control-input" data-ng-model="rc.examType" value="variable" autocomplete="off">
+                    <label class="custom-control-label" for="varExam">Variable Exam</label>
+                  </div>
+                  <div class="custom-control custom-radio my-2">
+                    <input type="radio" name="examType" id="traExam" class="custom-control-input" data-ng-model="rc.examType" value="traditional" autocomplete="off">
+                    <label class="custom-control-label" for="traExam">Traditional Exam</label>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary mt-3">Start review</button>
+              </div>
+            </form>
+          </div>
+          <div data-ng-show="rc.steps.review || rc.steps.exam">
+            <div data-ng-hide="rc.isComplete();" class="question-block">
+              <div class="question-container mb-5">
+                <p class="question">
+                  {{rc.currentQuestionItem.question}}
+                </p>
+                <ul class="question-details list-unstyled p-0">
+                  <li class="q-detail mb-3" data-ng-repeat="extraDetail in rc.currentQuestionItem.extraDetails">
+                    {{extraDetail}}
+                  </li>
+                </ul>
+              </div>
+<!--              <hr>-->
+              <form data-ng-submit="rc.nextQuestion();">
+                <div class="question-options mb-5">
+
+                  <div class="btn-group btn-group-toggle options-group" data-toggle="buttons">
+                    <label class="btn btn-normal option-item" data-ng-repeat="option in rc.currentQuestionItem.options">
+                      <input class="option-value" data-ng-model="rc.currentAnswer.answer" value="{{option.key}}" type="radio" name="options" autocomplete="off">
+                      {{option.value}}
+                    </label>
+
+                  </div>
+
+                </div>
+
+                <div data-ng-show="rc.currentAnswer.answer" class="question-controls">
+                  <button data-ng-show="rc.isLastQuestion();" type="submit" class="btn btn-success float-right">Finish</button>
+                  <button data-ng-hide="rc.isLastQuestion();" type="submit" class="btn btn-primary float-right">Next question</button>
+                </div>
+              </form>
+
+            </div>
+            <div data-ng-show="rc.isComplete();" class="completed-message">
+              <div class="congrats">
+                <div class="congrats-message text-center">
+                  <p class="congrats-heading">Congratulations {{rc.userInfo.name ? rc.userInfo.name + '!' : 'nobody'}} </p>
+                  <p class="m-1">You scored:</p>
+                  <p class="total-score">{{rc.getCurrentTotalScore()}} out of {{rc.totalQuestionItems}}</p>
+                </div>
+                <div class="text-center mt-3 mb-5">
+                  <button data-ng-click="rc.nextQuizType()" class="btn btn-primary">{{rc.buttonLabel}}</button>
+                </div>
+              </div>
+
+              <div class="score-details pt-4">
+                <h4>Review your answers:</h4>
+                <div class="answers-review" data-ng-show="rc.steps.review" data-ng-repeat="item in rc.userAnswers.reviewAnswers">
+                  <p ng-bind-html="rc.getQuestion(item)"></p>
+                  <p>Your answer: {{rc.getUserAnswerText(item)}}</p>
+                  <p ng-bind-html="rc.getCorrectAnswer(item);"></p>
+                </div>
+                <div class="answers-review" data-ng-show="rc.steps.exam" data-ng-repeat="item in rc.userAnswers.examAnswers">
+                  <p ng-bind-html="rc.getQuestion(item)"></p>
+                  <p>Your answer: {{rc.getUserAnswerText(item)}}</p>
+                  <p ng-bind-html="rc.getCorrectAnswer(item);"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-ng-show="rc.steps.examWelcome">
+
+            <h1>Proceed to Exam</h1>
+            <button data-ng-click="rc.resetExam('exam')" class="btn btn-primary">Start exam</button>
+          </div>
+          <div data-ng-show="rc.steps.endQuiz">
+
+            <h1>Finished!</h1>
+            <p>Review score: {{rc.userAnswers.reviewTotalScore}}</p>
+            <p>Exam score: {{rc.userAnswers.examTotalScore}}</p>
+            <button data-ng-click="rc.resetExam('toStartScreen')" class="btn btn-primary">Change exam type</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/popper.min.js"></script>
+
+<script src="js/angular.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
