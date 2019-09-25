@@ -149,6 +149,10 @@ angular.module('rApp', []);
                 rc.screenLabel = 'End';
                 rc.buttonLabel = 'Return to home';
             }
+            else if(rc.steps.endQuiz) {
+                rc.screenLabel = 'Reviewer';
+                rc.buttonLabel = 'Proceed to exam';
+            }
         }
 
         rc.resetExam = resetExam;
@@ -378,6 +382,13 @@ angular.module('rApp', []);
 
 
             switch (setQuizTo) {
+                case 'toStartScreen':
+                    rc.currentQuestionCount = 0;
+                    rc.totalScore = 0;
+                    rc.changeLabels();
+                    rc.init(false);
+                    rc.nextStep('reviewWelcome');
+                    break;
                 case 'exam':
                     rc.currentQuestionCount = 0;
                     rc.totalScore = 0;
@@ -388,6 +399,7 @@ angular.module('rApp', []);
 
 
         }
+
 
 
         function init(enableQuickCheck) {
@@ -406,3 +418,8 @@ angular.module('rApp', []);
 
     }
 })();
+
+
+// TODO
+// 1. progress bar
+// 2. password protection

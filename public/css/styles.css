@@ -3,15 +3,48 @@
 }
 
 body {
-    background-color: #eee;
+    background-color: #212121;
+    /*font-family: "Montserrat", serif;*/
 }
 
+.card {
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 8px 16px 0 rgba(0, 123, 255, 0.3);
+}
+.card-header:first-child {
+    padding: 1rem 2rem;
+}
+.screen-label {
+    letter-spacing: .32px;
+    line-height: 1.618em;
+}
 #training-body {
-    background-color: #f7f7f7;
+    padding: 2.5rem 2rem;
+}
+
+.custom-radio .custom-control-input:checked~.custom-control-label::after {
+    background-image: none;
+}
+
+
+
+
+
+.form-control {
+    background-color: #f1f1f1;
+    border: none;
+    border-radius: .5rem;
+    height: auto;
+    padding: 1rem;
+}
+.form-control:focus {
+    background-color: #f1f1f1;
 }
 
 .question {
     font-size: 1.25rem;
+    letter-spacing: .32px;
 }
 .option {
     background-color: #f8f9fa;
@@ -39,12 +72,15 @@ body {
 }
 
 .options-group .btn {
-    background-color: #fff;
-    border-radius: .25rem !important;
+    border-radius: 0;
+    border: none;
     cursor: pointer;
     display: block;
+    letter-spacing: .16px;
+    padding: 1rem 1.5rem;
     text-align: left;
     width: 100%;
+
 }
 
 .options-group .btn:not(:first-child) {
@@ -52,17 +88,34 @@ body {
 }
 
 .options-group .btn:not(:last-child) {
-    margin-bottom: 1rem;
+    /*margin-bottom: 1rem;*/
+    border-bottom: solid 1px #dfdfdf;
 }
+
+
+
+
+.btn-primary {
+    background-image: linear-gradient(45deg, #005bbd, #007bff);
+}
+.btn-primary:hover {
+    background-image: linear-gradient(#005bbd, #005bbd);
+}
+.btn-success:not(.option-item) {
+    background-image: linear-gradient(45deg, #218838, #28a745);
+}
+.btn-success:not(.option-item):hover {
+    background-image: linear-gradient(45deg, #218838, #218838);
+}
+
 
 .btn-normal {
     border: solid 1px #dfdfdf;
 }
 
 .btn-normal:hover {
-    color: #fff;
-    background-color: #929292;
-    border-color: #929292;
+    color: #212121;
+    background-color: #eee;
 }
 
 .btn-normal:not(:disabled):not(.disabled).active {
@@ -71,15 +124,24 @@ body {
     border-color: #007bff;
 }
 
-
-
+.btn:not(.option-item) {
+    border-radius: 999rem;
+    padding: .55rem 2.25rem;
+    letter-spacing: .48px;
+    line-height: 1.618em;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.25);
+    transition: transform .2s ease-out;
+}
+.btn:not(.option-item):active {
+    transform: translateY(3px);
+}
 .btn-success:not(:disabled):not(.disabled).active,
 .btn-success:not(:disabled):not(.disabled):active,
 .show>.btn-success.dropdown-toggle,
 .options-group .btn-success {
     background-color: #43a047;
     border-color: #43a047;
-    padding-right: 2.5rem;
+    padding-right: 4rem;
     position: relative;
 }
 
@@ -94,7 +156,7 @@ body {
     background-size: cover;
     height: 1.25rem;
     width: 1.25rem;
-    right: .5rem;
+    right: 1.5rem;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -126,7 +188,7 @@ body {
 
 
 .congrats-message {
-    background-image: linear-gradient(to right, #43a047,#66bb6a);
+    /*background-image: linear-gradient(to right, #43a047,#66bb6a);*/
     border-radius: 0.375rem;
     padding: 1rem;
 }
@@ -136,17 +198,32 @@ body {
 }
 
 .congrats-heading {
+    color: #28a745;
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: .54px;
 }
 
 .total-score {
-    font-size: 1.25rem;
+    background-color: #f1f1f1;
+    display: inline-block;
+    color: #454545;
+    font-size: 1.5rem;
     font-weight: 400;
     letter-spacing: .32px;
+    padding: .75rem 1.5rem;
+    border-radius: .5rem;
 }
 
+.score-details h4 {
+    background-color: #eee;
+    border-radius: .5rem;
+    font-size: 1rem;
+    letter-spacing: .48px;
+    padding: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+}
 .answers-review:not(:last-child) {
     border-bottom: solid 1px #d8d8d8;
     margin: 2rem 0;
