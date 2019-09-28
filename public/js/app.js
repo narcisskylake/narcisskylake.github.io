@@ -35,6 +35,8 @@ angular.module('rApp', []);
 
             rc.resetProgressBar();
             rc.initProgressBarCount();
+
+
         }
 
 
@@ -106,7 +108,16 @@ angular.module('rApp', []);
         function resetProgressBar() {
             rc.progressBarCount = 0;
             rc.progressBarValue = 0;
+            rc.isProgressBarComplete(false);
         }
+
+        rc.isProgressBarComplete = isProgressBarComplete;
+        function isProgressBarComplete(state) {
+            let progressBarElement = document.querySelector('.progress-bar');
+
+            state ? progressBarElement.classList.add('complete') : progressBarElement.classList.remove('complete');
+        }
+
 
         // rc.totalScore = 0;
 
@@ -196,6 +207,7 @@ angular.module('rApp', []);
 
             if(rc.isComplete()) {
                 rc.countUserScore();
+                rc.isProgressBarComplete(true);
             }
 
             enableOptions(true);
@@ -354,8 +366,25 @@ angular.module('rApp', []);
             }
         }
 
+
+
+        function enableInputs(action, inputsClassName) {
+
+            let inputs = document.getElementsByClassName(inputsClassName);
+            let inputsLength = inputs.length;
+            let status = !action;
+
+            for(let i = 0; i < inputsLength; i++) {
+                if(!inputs[i].classList.contains('user-answer')) {
+                    inputs[i].disabled = status;
+                }
+            }
+
+
+        }
+
         function initQuickCheck(isEnabled) {
-            let el = document.querySelector('.options-group')
+            let el = document.querySelector('.options-group');
 
             if(isEnabled) {
                 el.addEventListener('click', quickCheck);
@@ -370,6 +399,10 @@ angular.module('rApp', []);
                 enableOptions(false);
 
                 let optionItem = evt.target;
+
+                // add class to user's chosen answer
+                optionItem.children[0].classList.add('user-answer');
+
                 let currentAnswer = optionItem.children[0].value;
 
                 if(currentAnswer === rc.currentQuestionItem.answer) {
@@ -381,6 +414,8 @@ angular.module('rApp', []);
 
                     rc.highlightCorrectAnswer();
                 }
+
+                enableInputs(false, 'option-value');
 
             }
 
@@ -423,7 +458,7 @@ angular.module('rApp', []);
                     rc.currentQuestionCount = 0;
                     rc.totalScore = 0;
                     rc.changeLabels();
-                    rc.init(false);
+                    rc.init(true);
                     rc.nextStep('reviewWelcome');
                     break;
                 case 'exam':

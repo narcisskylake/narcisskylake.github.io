@@ -133,7 +133,7 @@ body {
     letter-spacing: .48px;
     line-height: 1.618em;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.25);
-    transition: transform .2s ease-out;
+    transition: all .2s ease-in-out;
 }
 .btn:not(.option-item):active {
     transform: translateY(3px);
@@ -284,4 +284,7 @@ body {
     background-color: #007bff;
     background-image: linear-gradient(45deg, #005bbd, #48a0ff);
     transition: width .6s ease;
+}
+.progress-bar.complete {
+    background-image: linear-gradient(45deg, #4BB543, #4BB543);
 }
