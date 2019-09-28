@@ -3,8 +3,9 @@
 }
 
 body {
-    color: #222831;
-    /*background-color: #222831;*/
+    /*color: #222831;*/
+    color: #424955;
+    background-color: #fafafa;
     /*font-family: "Montserrat", serif;*/
 }
 
@@ -28,15 +29,16 @@ body {
 
 
 .form-control {
-    background-color: #f1f1f1;
+    background-color: #eee;
     border: none;
     border-radius: .5rem;
     height: auto;
     padding: 1rem;
 }
 .form-control:focus {
-    background-color: #f1f1f1;
+    background-color: #eee;
 }
+
 
 .question-container:after {
     position: absolute;
@@ -59,8 +61,8 @@ body {
 
 .options-group {
     display: block;
+    /*overflow: hidden;*/
 }
-
 .disable-options {
     pointer-events: none;
 }
@@ -97,6 +99,11 @@ body {
 
 
 
+.appear {
+    animation: appear .4s ease-in-out;
+}
+
+
 
 .btn-primary {
     background-image: linear-gradient(45deg, #005bbd, #007bff);
@@ -118,7 +125,7 @@ body {
 
 .btn-normal:hover {
     color: #222831;
-    background-color: #eee;
+    background-color: #ebebeb;
 }
 
 .btn-normal:not(:disabled):not(.disabled).active {
@@ -221,6 +228,14 @@ body {
 
 
 
+.congrats {
+    /*animation-name: pop;*/
+    /*animation-duration: .75s;*/
+    /*animation-timing-function: ease-out;*/
+
+    animation: pop .75s ease-out;
+}
+
 .congrats-message {
     /*background-image: linear-gradient(to right, #43a047,#66bb6a);*/
     border-radius: 0.375rem;
@@ -288,3 +303,27 @@ body {
 .progress-bar.complete {
     background-image: linear-gradient(45deg, #4BB543, #4BB543);
 }
+
+
+@keyframes pop {
+    0% {
+        opacity: 0;
+        transform: scale(.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: scale(.95);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+

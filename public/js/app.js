@@ -9,8 +9,9 @@ angular.module('rApp', []);
     function ReviewerController($http, $sce, $scope) {
 
         let rc = this;
-        let VARIABLEQUESTIONSFILE = 'js/variableQuestions.json';
+        let VARIABLEQUESTIONSFILE = 'js/variable-life-test-d.json';
         let TRADITIONALQUESTIONSFILE = 'js/traditional-life-mock-exam-1.json';
+        // let TRADITIONALQUESTIONSFILE = 'js/traditionalQuestions.json';
 
         rc.examType = 'variable';
 
@@ -133,7 +134,7 @@ angular.module('rApp', []);
         rc.totalQuestionItems = 0;
 
 
-
+        rc.scrollToTop = scrollToTop;
         rc.nextQuestion = nextQuestion;
         rc.initCurrentQuestionItem = initCurrentQuestionItem;
         rc.saveCurrentAnswer = saveCurrentAnswer;
@@ -193,8 +194,19 @@ angular.module('rApp', []);
 
 
 
+        function animateQuestionBlock() {
+            let questionBlock = document.getElementsByClassName('question-block');
+            questionBlock[0].classList.add('appear');
+
+            setTimeout(function () {
+                questionBlock[0].classList.remove('appear');
+            }, 300);
+        }
+
         function nextQuestion() {
-            scrollToTop('top');
+            animateQuestionBlock();
+
+            rc.scrollToTop('top');
 
             if(rc.steps.review) {
                 rc.saveCurrentAnswer('review');

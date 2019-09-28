@@ -845,17 +845,11 @@
 			"extraDetails": [],
 			"options": [
         		{
-        			"key" : "a",
-        			"value" : "\n"
-        			},{
-          			"key" : "b",
-          			"value" : "\n"
-        			},{
-         			"key" : "c",
-          			"value" : "\n"
-        			},{
-          			"key" : "d",
-          			"value" : "\n"
+					"key" : "T",
+					"value" : "TRUE\n"
+				},{
+					"key" : "F",
+					"value" : "FALSE\n"
         		}
       		],
       		"answer": "F"
