@@ -10,7 +10,7 @@ angular.module('rApp', []);
 
         let rc = this;
         let VARIABLEQUESTIONSFILE = 'js/variableQuestions.json';
-        let TRADITIONALQUESTIONSFILE = 'js/traditionalQuestions.json';
+        let TRADITIONALQUESTIONSFILE = 'js/traditional-life-mock-exam-1.json';
 
         rc.examType = 'variable';
 

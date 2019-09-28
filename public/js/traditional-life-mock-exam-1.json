@@ -1,0 +1,999 @@
+{
+	"items" : [
+		{
+			"question": "Both endowment and term life policies provides that\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : "No cash  value is available to the policy owner during the term of the policy\n"
+        			},{
+          			"key" : "b",
+          			"value" : "Number of units of fixed monetary through reduction of the life cover sum assured\n"
+        			},{
+         			"key" : "c",
+          			"value" : "Fixed monetary amount only through reduction of the life cover sum assured"
+        			},{
+          			"key" : "d",
+          			"value" : "Number of units through cancellation of units."
+        		}
+      		],
+      		"answer": "d"
+		},
+
+		{
+			"question": "Indicate which of the following is not a function of an application for life insurance policy.\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : "Number of units or fixed monetary amount through cancellation of units\n"
+        			},{
+          			"key" : "b",
+          			"value" : "Number of units of fixed monetary through reduction of the life cover sum assured\n"
+        			},{
+         			"key" : "c",
+          			"value" : "Fixed monetary amount only through reduction of the life cover sum assured"
+        			},{
+          			"key" : "d",
+          			"value" : "Number of units through cancellation of units."
+        		}
+      		],
+      		"answer": "a"
+		},
+
+		{
+			"question": "father has his present life insurance payable to his estate and because he has now retired he wants to pass the policy on his son who will assume the premium payments. Which of the following will he have to appoint his son to achieve his desire and protect the son from Estate Tax Liability?\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : "Irrevocable primary beneficiary\n"
+        			},{
+          			"key" : "b",
+          			"value" : "Absolute assignee\n"
+        			},{
+         			"key" : "c",
+          			"value" : "Irrevocable secondary beneficiary"
+        			},{
+          			"key" : "d",
+          			"value" : "Revocable primary beneficiary"
+        		}
+      		],
+      		"answer": "b"
+		},
+
+		{
+			"question": "A policy where an irrevocable beneficiary has been designated the insured without the beneficiary’s permission, can\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : "Avail of a non for-feiture option\n"
+        			},{
+          			"key" : "b",
+          			"value" : "Discontinue premium payments\n"
+        			},{
+         			"key" : "c",
+          			"value" : "Borrow minimal cash loan"
+        			},{
+          			"key" : "d",
+          			"value" : "Alter the dividend option now in effect"
+        		}
+      		],
+      		"answer": "b"
+		},
+
+		{
+			"question": "What are the basic settlement options?\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : "Policy loan, guaranteed insurability\n"
+        			},{
+          			"key" : "b",
+          			"value" : "Cash surrender value, automatic premium loan\n"
+        			},{
+         			"key" : "c",
+          			"value" : "Fixed amount, fixed period, life income, interest on deposit"
+        			},{
+          			"key" : "d",
+          			"value" : "Double indemnity, total and permanent disability waiver"
+        		}
+      		],
+      		"answer": "c"
+		},
+
+		{
+			"question": "An insurance company generally has the right to rescind a life insurance policy if\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : "Company discovers at any time that the policy owner was actually a minor at the time of application\n"
+        			},{
+          			"key" : "b",
+          			"value" : "Insured person intentionally skills himself during the suicide exclusion period specified in the policy\n"
+        			},{
+         			"key" : "c",
+          			"value" : "Insured person is killed in military action during the contestable period of the policy"
+        			},{
+          			"key" : "d",
+          			"value" : "Company discovers during the contestable period that the application contains a material statement"
+        		}
+      		],
+      		"answer": "a"
+		},
+
+		{
+			"question": "Which of the following is the least important reason for requiring that insurance agent’s be licensed?\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : "To established and maintain high professional and ethical standards\n"
+        			},{
+          			"key" : "b",
+          			"value" : "To protect the public\n"
+        			},{
+         			"key" : "c",
+          			"value" : "To give the government adequate control over the conduct of agents"
+        			},{
+          			"key" : "d",
+          			"value" : "To provide additional income to the government through license fees"
+        		}
+      		],
+      		"answer": "d"
+		},
+
+		{
+			"question": "In the event that a policy owner elects the paid-up insurance option\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : "The premiums stop and the policy continues for the full  face amount until age 65\n"
+        			},{
+          			"key" : "b",
+          			"value" : "The insurance at a reduced amount and with a reduced premium\n"
+        			},{
+         			"key" : "c",
+          			"value" : "The policy will automatically terminate"
+        			},{
+          			"key" : "d",
+          			"value" : "The premiums cease and protection continues with a reduced amount of coverage"
+        		}
+      		],
+      		"answer": "d"
+		},
+
+		{
+			"question": " The company will allow a policy change from a higher premium to a lower premium provided the insured\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : "Buys a new plan altogether\n"
+        			},{
+          			"key" : "b",
+          			"value" : "Presents satisfactory evidence of insurability\n"
+        			},{
+         			"key" : "c",
+          			"value" : "Momentarily assigns the policy to the company\n"
+        			},{
+          			"key" : "d",
+          			"value" : "Obtains written consent from his or her spouse\n"
+        		}
+      		],
+      		"answer": "b"
+		},
+
+		{
+			"question": "A policy which permits the policyholder to vary the level of premiums, the sum insured and has its cash  values dependent upon the investment performance and the level of premium paid is known as______ policy\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : "Participating whole life policy\n"
+        			},{
+          			"key" : "b",
+          			"value" : "Participating endowment\n"
+        			},{
+         			"key" : "c",
+          			"value" : "Universal life\n"
+        			},{
+          			"key" : "d",
+          			"value" : "None of the above\n"
+        		}
+      		],
+      		"answer": "c"
+		},
+
+		{
+			"question": "Which of the following statements about “Disability Waiver of Premium Rider” is false?\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : "Disability  must occur before a stated date\n"
+        			},{
+          			"key" : "b",
+          			"value" : "The insurance has to die while disabled\n"
+        			},{
+         			"key" : "c",
+          			"value" : "There is a waiting period\n"
+        			},{
+          			"key" : "d",
+          			"value" : "It has to be attached to a life insurance policy\n"
+        		}
+      		],
+      		"answer": "b"
+		},
+
+		{
+			"question": "In most life insurance application, the largest amount of information requested is date which\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : "Identifies the applicant\n"
+        			},{
+          			"key" : "b",
+          			"value" : "Describes the type of insurance applied for\n"
+        			},{
+         			"key" : "c",
+          			"value" : "Relates to the insurability of the applicant\n"
+        			},{
+          			"key" : "d",
+          			"value" : "Describe the desired benefits and mode of payment\n"
+        		}
+      		],
+      		"answer": "c"
+		},
+
+		{
+			"question": "Paid-up additions\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : "Affect both cash and loan value of the policy\n"
+        			},{
+          			"key" : "b",
+          			"value" : "Don’t affect the cash value of the policy\n"
+        			},{
+         			"key" : "c",
+          			"value" : "Don’t affect the loan or cash value of the policy\n"
+        			},{
+          			"key" : "d",
+          			"value" : "Only affect the cash value of the policy\n"
+        		}
+      		],
+      		"answer": "c"
+		},
+
+		{
+			"question": "The total life coverage of a permanent basic policy can be greatly increased through the use of\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : " An accident death benefits rider\n"
+        			},{
+          			"key" : "b",
+          			"value" : "An interim term rider\n"
+        			},{
+         			"key" : "c",
+          			"value" : "A supplemental term rider\n"
+        			},{
+          			"key" : "d",
+          			"value" : " None of the above\n"
+        		}
+      		],
+      		"answer": "c"
+		},
+
+		{
+			"question": " Life insurance companies make use of the laws of probability in order to\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : "Estimate future death rates among members of a given group\n"
+        			},{
+          			"key" : "b",
+          			"value" : "Predict when an individual insured will die\n"
+        			},{
+         			"key" : "c",
+          			"value" : "Develop statistic of past death among the general population\n"
+        			},{
+          			"key" : "d",
+          			"value" : "Determine the experienced death rate among the insured persons\n"
+        		}
+      		],
+      		"answer": "a"
+		},
+
+		{
+			"question": "In the case of renewable term insurance, the policy owner may\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : "Renew the coverage based on a higher premium\n"
+        			},{
+          			"key" : "b",
+          			"value" : "Change the life insured at renewal date\n"
+        			},{
+         			"key" : "c",
+          			"value" : "Renew providing the insurance company agrees to continue coverage\n"
+        			},{
+          			"key" : "d",
+          			"value" : "Renew at the same premium for further period of years\n"
+        		}
+      		],
+      		"answer": "a"
+		},
+
+		{
+			"question": "A man applied for a Ps. 20,000 whole life policy and paid the full initial premium to the soliciting agent. The agent issued a binding receipt, under such a  receipt, the insurance company\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : "Offers permanent insurance coverage effective as of the date of the application\n"
+        			},{
+          			"key" : "b",
+          			"value" : "Promises that the insurance coverage will become effective as of the date the application is approved\n"
+        			},{
+         			"key" : "c",
+          			"value" : "Guarantees the policy will be issued as applied for\n"
+        			},{
+          			"key" : "d",
+          			"value" : "Immediately provides interim insurance that remains in effect until the policy is issued or the application is declined\n"
+        		}
+      		],
+      		"answer": "d"
+		},
+
+		{
+			"question": "Endowment life insurance and term life insurance are similar in that both plans\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : "Build up cash value rapidly in the early policy years\n"
+        			},{
+          			"key" : "b",
+          			"value" : "Provide for payment of the face amount if the insured is alive at the end of the specified period\n"
+        			},{
+         			"key" : "c",
+          			"value" : "Provide life insurance protection foe only the period of time specified in the policy contract\n"
+        			},{
+          			"key" : "d",
+          			"value" : " Contain provisions for automatic continuation of the insurance protection at the end of a specified period\n"
+        		}
+      		],
+      		"answer": "c"
+		},
+
+		{
+			"question": "An agent who determines a prospect’s complete financial requirements preparatory to offering him a policy using the correct selling approach knows as\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : "Counselor selling\n"
+        			},{
+          			"key" : "b",
+          			"value" : "Total needs selling\n"
+        			},{
+         			"key" : "c",
+          			"value" : "Planned selling\n"
+        			},{
+          			"key" : "d",
+          			"value" : "Multiple products selling\n"
+        		}
+      		],
+      		"answer": "b"
+		},
+
+		{
+			"question": "Name the provision in a permanent life insurance policy under the premiums are discontinued, full insurance will be maintained for a specified period:\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : "Extended term insurance\n"
+        			},{
+          			"key" : "b",
+          			"value" : "Paid-up insurance additions\n"
+        			},{
+         			"key" : "c",
+          			"value" : "Life income option pension\n"
+        			},{
+          			"key" : "d",
+          			"value" : " Reduced paid-up insurance\n"
+        		}
+      		],
+      		"answer": "a"
+		},
+
+		{
+			"question": "Notwithstanding various possible legal impediments, if the owner of an endowment at age 65 Policy tells you that the maturity of the policy he wants to provide his church with a monthly donation for as long as the church exists.\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : "Fixed income option\n"
+        			},{
+          			"key" : "b",
+          			"value" : "Periodic annuity option\n"
+        			},{
+         			"key" : "c",
+          			"value" : "Interest  option\n"
+        			},{
+          			"key" : "d",
+          			"value" : " Life annuity option\n"
+        		}
+      		],
+      		"answer": "c"
+		},
+
+		{
+			"question": "The extent of medical evidence required is determined by\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : "The age of the applicant and the proposed sum to be insured\n"
+        			},{
+          			"key" : "b",
+          			"value" : "Occupation of the applicant\n"
+        			},{
+         			"key" : "c",
+          			"value" : "Financial condition of the applicant\n"
+        			},{
+          			"key" : "d",
+          			"value" : "Date of the last medical examination\n"
+        		}
+      		],
+      		"answer": "a"
+		},
+
+		{
+			"question": "The conservation of a life insurance policy is dependent on all following except\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : "The level of first year commission\n"
+        			},{
+          			"key" : "b",
+          			"value" : "Agent’s service oriented attitude\n"
+        			},{
+         			"key" : "c",
+          			"value" : "Pressure selling\n"
+        			},{
+          			"key" : "d",
+          			"value" : "The use of effective needs selling\n"
+        		}
+      		],
+      		"answer": "c"
+		},
+
+		{
+			"question": "All of the following are sources of information to an insurance company pertaining to the insurability of an applicant except\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : "The applicant’s personal appearance\n"
+        			},{
+          			"key" : "b",
+          			"value" : "Medical examination report\n"
+        			},{
+         			"key" : "c",
+          			"value" : "Agent’s inspection report\n"
+        			},{
+          			"key" : "d",
+          			"value" : "Government tax records\n"
+        		}
+      		],
+      		"answer": "d"
+		},
+
+		{
+			"question": "If the applicant foe life insurance fails to disclose or misrepresents material fact, the contract is\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : "Valid if the insurer issues a policy which is delivered to the applicant\n"
+        			},{
+          			"key" : "b",
+          			"value" : "Void from the beginning\n"
+        			},{
+         			"key" : "c",
+          			"value" : "Voidable by the insurer if it has been in force less than 2 years\n"
+        			},{
+          			"key" : "d",
+          			"value" : "Valid unless the insurer can prove fraud\n"
+        		}
+      		],
+      		"answer": "d"
+		},
+
+		{
+			"question": "The settlement options provision may provide all the following except?\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : "Payment of the proceeds for the life of the insured\n"
+        			},{
+          			"key" : "b",
+          			"value" : "Payment of the proceeds over the fixed period\n"
+        			},{
+         			"key" : "c",
+          			"value" : "Payments of the proceeds in fixed amount until exhausted\n"
+        			},{
+          			"key" : "d",
+          			"value" : "Proceeds held by the company, with interest payable to the beneficiary on request\n"
+        		}
+      		],
+      		"answer": "d"
+		},
+
+		{
+			"question": "Non-forfeiture provision are included in whole life and endowment policies to assure the policy owner that certain minimum policy benefits shall remain with him even under certain changed conditions. Non-forfeiture values guarantee to the policy owner that\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : "No death claim will be denied for any misstatement  on the application\n"
+        			},{
+          			"key" : "b",
+          			"value" : "Any guaranteed policy values will belong to the policy owner even if premium payments are discounted\n"
+        			},{
+         			"key" : "c",
+          			"value" : "The face amount of the policy will remain the same if the insured’s health becomes impaired\n"
+        			},{
+          			"key" : "d",
+          			"value" : "The premium on the policy will remain the same even when another beneficiary is added to the policy\n"
+        		}
+      		],
+      		"answer": "b"
+		},
+
+		{
+			"question": "Purchasing a continuous-premium, whole life policy rather than limited payment, whole life policy gives the policy owner the advantage of\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : "Concentration of premium payments during the period of highest earnings\n"
+        			},{
+          			"key" : "b",
+          			"value" : "Liberal risk selection procedures\n"
+        			},{
+         			"key" : "c",
+          			"value" : "More insurance protection for the same annual premium outlay\n"
+        			},{
+          			"key" : "d",
+          			"value" : "More rapid accumulation of cash values\n"
+        		}
+      		],
+      		"answer": "c"
+		},
+
+		{
+			"question": "In certain situations a company may file interpleader actions with a Court of Law. This remedy is used to\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : "Determine if the cause of the insured’s death wan an excluded risk\n"
+        			},{
+          			"key" : "b",
+          			"value" : "Decide conflicting claims on the same insurance proceeds\n"
+        			},{
+         			"key" : "c",
+          			"value" : "Resolve the question  of insurable interest\n"
+        			},{
+          			"key" : "d",
+          			"value" : "Recommend the best settlement options for the beneficiary, if the interest on a policy loan is not paid at the policy anniversary the insurance\n"
+        		}
+      		],
+      		"answer": "b"
+		},
+
+		{
+			"question": "Which of the following statement is false?\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : "The cash value of a whole life policy builds up a slower rate than for a 20 year endowment\n"
+        			},{
+          			"key" : "b",
+          			"value" : "The cash value in a permanent policy is guaranteed by the company\n"
+        			},{
+         			"key" : "c",
+          			"value" : "The cash value of an endowment builds up faster than that for a limited pay life policy of the same direction\n"
+        			},{
+          			"key" : "d",
+          			"value" : "Because of its very short duration the cash value of a yearly renewable term policy grows very fast\n"
+        		}
+      		],
+      		"answer": "d"
+		},
+
+		{
+			"question": "Which of the following does not have a legitimate insurable interest?\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : "An individual on the life of his mistress\n"
+        			},{
+          			"key" : "b",
+          			"value" : "An individual on his own life\n"
+        			},{
+         			"key" : "c",
+          			"value" : "An individual on the life of his spouse\n"
+        			},{
+          			"key" : "d",
+          			"value" : "A finance company on the life of its borrower\n"
+        		}
+      		],
+      		"answer": "a"
+		},
+
+		{
+			"question": "The basic coverage provided by the life insurance policies may be supplemented by a separate provision that provides coverage for accidental amount of a different nature. Collectively these provision are known as\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : "Riders\n"
+        			},{
+          			"key" : "b",
+          			"value" : "Deposit privileges\n"
+        			},{
+         			"key" : "c",
+          			"value" : "Dividends\n"
+        			},{
+          			"key" : "d",
+          			"value" : "Assignment\n"
+        		}
+      		],
+      		"answer": "a"
+		},
+
+		{
+			"question": "Which of the following statement regarding insurance premiums is false?\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : "Cash is required for all premiums paid in the grace period\n"
+        			},{
+          			"key" : "b",
+          			"value" : "A premium is the legal consideration needed to effectuate a life insurance policy\n"
+        			},{
+         			"key" : "c",
+          			"value" : "The grace period is usually 31 days\n"
+        			},{
+          			"key" : "d",
+          			"value" : "Premiums which are paid quarterly or semi-annually are higher than those paid annually\n"
+        		}
+      		],
+      		"answer": "a"
+		},
+
+		{
+			"question": "A non-forfeiture option would ordinarily be selected at the time a policyowner\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : "Renews a term life policy\n"
+        			},{
+          			"key" : "b",
+          			"value" : "Converts a term policy to a whole life proceeds\n"
+        			},{
+         			"key" : "c",
+          			"value" : "Chooses a mode of settlement for the life proceeds\n"
+        			},{
+          			"key" : "d",
+          			"value" : "Discontinue premium payments for a whole or endowment policy\n"
+        		}
+      		],
+      		"answer": "d"
+		},
+
+		{
+			"question": "If the interest on a policy loan is not paid at the policy anniversary  the issuance company\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : "Demand full settlement of the loan\n"
+        			},{
+          			"key" : "b",
+          			"value" : "Terminate the contract\n"
+        			},{
+         			"key" : "c",
+          			"value" : "Refuse to grant future additional loan\n"
+        			},{
+          			"key" : "d",
+          			"value" : "Increase the present loan by the interest\n"
+        		}
+      		],
+      		"answer": "d"
+		},
+
+		{
+			"question": "The incontestability clause\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : "Gives the company the right to rescind  a policy at any time\n"
+        			},{
+          			"key" : "b",
+          			"value" : "Permits the company to pay claims within 2 years\n"
+        			},{
+         			"key" : "c",
+          			"value" : "Makes it necessary for the beneficiary to present proof of death in the event of a death claim\n"
+        			},{
+          			"key" : "d",
+          			"value" : "Prevents the company from denying a claim after has been in force for 2 years\n"
+        		}
+      		],
+      		"answer": "d"
+		},
+
+		{
+			"question": "The insured named a primary and secondary revocable beneficiary for Ps. 20,000 policy. Which of the following is correct?\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : "The designation of a contingent beneficiary is subject to the primary beneficiary’s approval\n"
+        			},{
+          			"key" : "b",
+          			"value" : "The insured can add a third beneficiary at any time\n"
+        			},{
+         			"key" : "c",
+          			"value" : "Any  policy loan assigned will require the primary beneficiary’s signature\n"
+        			},{
+          			"key" : "d",
+          			"value" : "Upon the insured’s death the primary and secondary beneficiaries shall each receive Ps.10,000\n"
+        		}
+      		],
+      		"answer": "b"
+		},
+
+		{
+			"question": "When you bought an insurance policy on your wife’s life, you were 27 and she was 26, but you stated you were 26 and she was 27. Five years later your wife died. The insurer will pay\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : "Slightly less than the face amount\n"
+        			},{
+          			"key" : "b",
+          			"value" : "The face amount\n"
+        			},{
+         			"key" : "c",
+          			"value" : "The face amount adjusted for misstatement of age\n"
+        			},{
+          			"key" : "d",
+          			"value" : "The sum premium paid\n"
+        		}
+      		],
+      		"answer": "c"
+		},
+
+		{
+			"question": "If the interest on a policy loan is not paid at the policy anniversary the insurance company may\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : "Increase the present loan by the interest\n"
+        			},{
+          			"key" : "b",
+          			"value" : "Terminate the contract\n"
+        			},{
+         			"key" : "c",
+          			"value" : "Refuse to grant future additional loan\n"
+        			},{
+          			"key" : "d",
+          			"value" : "Demand full settlement of the loan\n"
+        		}
+      		],
+      		"answer": "a"
+		},
+
+		{
+			"question": "A yearly renewable term life insurance policy generally specified that\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : "The policy owner may renew the policy only once\n"
+        			},{
+          			"key" : "b",
+          			"value" : "Premiums shall increase every time the policy is renewed\n"
+        			},{
+         			"key" : "c",
+          			"value" : "Evidence of insurability shall be required every renewal\n"
+        			},{
+          			"key" : "d",
+          			"value" : "Cash values will increase for as long as the policy is in force\n"
+        		}
+      		],
+      		"answer": "b"
+		},
+
+		{
+			"question": "In a case where the premium has not been paid and the value has been exhausted, the policy can still avail of the grace period\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "a",
+        			"value" : "\n"
+        			},{
+          			"key" : "b",
+          			"value" : "\n"
+        			},{
+         			"key" : "c",
+          			"value" : "\n"
+        			},{
+          			"key" : "d",
+          			"value" : "\n"
+        		}
+      		],
+      		"answer": "F"
+		},
+
+		{
+			"question": "According to the law of large numbers , events which happen seemingly by chance will actually be bound to follow a predictable patterns , if enough such happenings are observe\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "T",
+        			"value" : "TRUE\n"
+        			},{
+          			"key" : "F",
+          			"value" : "FALSE\n"
+        		}
+      		],
+      		"answer": "T"
+		},
+
+		{
+			"question": " Anti-selection occurs when persons in poor health wish to buy insurance\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "T",
+        			"value" : "TRUE\n"
+        			},{
+          			"key" : "F",
+          			"value" : "FALSE\n"
+        		}
+      		],
+      		"answer": "T"
+		},
+
+		{
+			"question": "A policy is still in force for the full face amount and will remain in force for a further period of four years and 118 days, without the payment or any premiums has availed of paid up insurance option.\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "T",
+        			"value" : "TRUE\n"
+        			},{
+          			"key" : "F",
+          			"value" : "FALSE\n"
+        		}
+      		],
+      		"answer": "F"
+		},
+
+		{
+			"question": "In the case of misstatement of age, the amount of insurance is adjusted to the amount which the premium paid at the correct age would have purchased\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "T",
+        			"value" : "TRUE\n"
+        			},{
+          			"key" : "F",
+          			"value" : "FALSE\n"
+        		}
+      		],
+      		"answer": "T"
+		},
+
+		{
+			"question": " A policy that provides guaranteed cash values plus extra annual distributions and pays the insured after a specified time is known as participating endowment.\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "T",
+        			"value" : "TRUE\n"
+        			},{
+          			"key" : "F",
+          			"value" : "FALSE\n"
+        		}
+      		],
+      		"answer": "T"
+		},
+
+		{
+			"question": "In a group insurance it is assumed that every member of the group is insurable, provided that every member of the group is working a minimum number of (usually 50 hours) each week.\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "T",
+        			"value" : "TRUE\n"
+        			},{
+          			"key" : "F",
+          			"value" : "FALSE\n"
+        		}
+      		],
+      		"answer": "F"
+		},
+
+		{
+			"question": "An endowment at age 65 policy with premium payable for a limited period of 20 years pays the full amount after 20 years.\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "T",
+        			"value" : "TRUE\n"
+        			},{
+          			"key" : "F",
+          			"value" : "FALSE\n"
+        		}
+      		],
+      		"answer": "F"
+		},
+
+		{
+			"question": "In most life insurance applications, the largest amount of information requested is data which identifies the applicant\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "T",
+        			"value" : "TRUE\n"
+        			},{
+          			"key" : "F",
+          			"value" : "FALSE\n"
+        		}
+      		],
+      		"answer": "F"
+		},
+
+		{
+			"question": "A policy is not rendered void by reason of misstatement of the assured’s death\n",
+			"extraDetails": [],
+			"options": [
+        		{
+        			"key" : "T",
+        			"value" : "TRUE\n"
+        			},{
+          			"key" : "F",
+          			"value" : "FALSE\n"
+        		}
+      		],
+      		"answer": "T"
+		}
+	]
+}
