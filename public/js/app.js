@@ -32,6 +32,9 @@ angular.module('rApp', []);
 
             rc.steps[step] = true;
             rc.tempNextStep = step;
+
+            rc.resetProgressBar();
+            rc.initProgressBarCount();
         }
 
 
@@ -86,6 +89,24 @@ angular.module('rApp', []);
             questionOrder: -1,
             answer: ''
         };
+
+
+        rc.progressBarCount = 0;
+        rc.progressBarValue = 0;
+
+        rc.updateProgressBarValue = updateProgressBarValue;
+        function updateProgressBarValue() {
+            return rc.progressBarValue += rc.progressBarCount;
+        }
+        rc.initProgressBarCount = initProgressBarCount;
+        function initProgressBarCount() {
+            rc.progressBarCount = 100 / rc.totalQuestionItems;
+        }
+        rc.resetProgressBar = resetProgressBar;
+        function resetProgressBar() {
+            rc.progressBarCount = 0;
+            rc.progressBarValue = 0;
+        }
 
         // rc.totalScore = 0;
 
@@ -178,6 +199,8 @@ angular.module('rApp', []);
             }
 
             enableOptions(true);
+
+            rc.updateProgressBarValue();
         }
 
         function initCurrentQuestionItem() {
