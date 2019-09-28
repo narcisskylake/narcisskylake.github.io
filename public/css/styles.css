@@ -172,7 +172,7 @@ body {
 .options-group .btn-danger {
     color: inherit;
     background-color: transparent;
-    border-color: transparent;
+    border-color: #dfdfdf;
     padding-right: 4rem;
     position: relative;
 }
