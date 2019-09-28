@@ -98,7 +98,7 @@
           <div data-ng-show="rc.isComplete();" class="completed-message">
             <div class="congrats">
               <div class="congrats-message text-center">
-                <p class="congrats-heading">Congratulations {{rc.userInfo.name ? rc.userInfo.name + '!' : 'nobody'}} </p>
+                <p class="congrats-heading">Congratulations <span class="text-capitalize">{{rc.userInfo.name ? rc.userInfo.name + '!' : 'nobody'}}</span></p>
                 <p class="m-1">You scored:</p>
                 <p class="total-score"><strong>{{rc.getCurrentTotalScore()}}</strong> <small>out of</small> {{rc.totalQuestionItems}}</p>
               </div>
