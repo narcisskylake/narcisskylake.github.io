@@ -1,4 +1,4 @@
-angular.module('rApp', []);
+angular.module('rApp', ['passcodeService']);
 
 (function () {
     'use strict';
@@ -6,7 +6,7 @@ angular.module('rApp', []);
         .module('rApp')
         .controller('ReviewerController', ReviewerController);
 
-    function ReviewerController($http, $sce, $scope) {
+    function ReviewerController($http, $sce, $scope, $timeout, PasscodeService) {
 
         let rc = this;
         let VARIABLEQUESTIONSFILE = 'js/variable-life-test-d.json';
@@ -495,9 +495,40 @@ angular.module('rApp', []);
         }
 
 
-        $scope.$watch('rc.examType', function(newVal, oldVal) {
-            rc.getQuestionsJSON();
-        });
+        rc.initWatchExamType = initWatchExamType;
+        function initWatchExamType() {
+            $scope.$watch('rc.examType', function(newVal, oldVal) {
+                rc.getQuestionsJSON();
+            });
+        }
+
+
+        rc.passcodeInfo = {
+            "userPass": '',
+            "allowedHours": 0,
+            "row": '',
+            "success": false
+        };
+
+        rc.checkPasscode = checkPasscode;
+        function checkPasscode() {
+            let passcode = rc.passcodeInfo.userPass ? rc.passcodeInfo.userPass : ' ';
+
+            PasscodeService.getPasscode(passcode).then(function (response) {
+                let data = response.data;
+                if(data.success) {
+                    rc.passcodeInfo.allowedHours = data.allowedHours;
+                    rc.passcodeInfo.row = data.row;
+                    rc.passcodeInfo.success = true;
+
+
+                    rc.initWatchExamType();
+                }
+            });
+        }
+
+
+
 
 
     }
