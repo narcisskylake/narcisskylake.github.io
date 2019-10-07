@@ -511,11 +511,19 @@ angular.module('rApp', ['passcodeService']);
         };
 
         rc.checkPasscode = checkPasscode;
+        rc.isSendingPasscode = false;
         function checkPasscode() {
+            rc.isSendingPasscode = true;
+            let formError = document.querySelector('.form-error');
+            formError.innerHTML = 'Checking...';
+            formError.classList.remove('text-danger');
+
             let passcode = rc.passcodeInfo.userPass ? rc.passcodeInfo.userPass : ' ';
 
             PasscodeService.getPasscode(passcode).then(function (response) {
                 let data = response.data;
+                rc.isSendingPasscode = false;
+
                 if(data.success) {
                     rc.passcodeInfo.allowedHours = data.allowedHours;
                     rc.passcodeInfo.row = data.row;
@@ -523,6 +531,10 @@ angular.module('rApp', ['passcodeService']);
 
 
                     rc.initWatchExamType();
+                } else {
+
+                    formError.classList.add('text-danger');
+                    formError.innerHTML = data.msg;
                 }
             });
         }

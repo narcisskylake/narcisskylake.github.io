@@ -16,7 +16,7 @@
 <!--</nav>-->
 <div class="container pt-3">
   <div class="row justify-content-center">
-    <div data-ng-if="rc.passcodeInfo.success" class="col-sm-12 col-md-12 col-lg-8 pb-5">
+    <div data-ng-if="rc.passcodeInfo.success" class="col-sm-12 col-md-12 col-lg-8 pb-5 appear">
 
       <div class="top-bar d-flex align-items-center justify-content-between">
         <p class="screen-label m-0">{{rc.screenLabel}} - <span class="text-capitalize">{{rc.examType}}</span></p>
@@ -143,13 +143,19 @@
 
     </div>
     <div data-ng-if="!rc.passcodeInfo.success" class="col-sm-12 col-md-12 col-lg-8 pb-5">
-      <form data-ng-submit="rc.checkPasscode();">
-        <div class="col-sm-5 p-0">
+      <form class="passcode-form" data-ng-submit="rc.checkPasscode();">
+        <div class="col-sm-5 mx-auto p-0 text-center">
           <div class="form-group mb-4">
-            <label for="userPass">Enter Passcode:</label>
+<!--            <label for="userPass">Enter Passcode:</label>-->
             <input autofocus data-ng-model="rc.passcodeInfo.userPass" type="text" class="form-control" id="userPass" placeholder="Enter passcode">
+            <span class="form-error d-block mt-2">Please enter passcode.</span>
           </div>
-          <button type="submit" class="btn btn-primary mt-3">Submit</button>
+          <button data-ng-show="!rc.isSendingPasscode" type="submit" class="btn btn-primary mt-2">Submit</button>
+          <div data-ng-show="rc.isSendingPasscode" class="spinner spinner--blue mt-5 mx-auto">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+          </div>
         </div>
       </form>
     </div>
