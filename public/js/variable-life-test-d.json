@@ -1228,31 +1228,6 @@
         }
       ],
       "answer": "a"
-    },
-    {
-      "question": "In risk return profile of cash funds, bond funds, balanced funds, managed funds and equity funds, a risk return graph will show that _________",
-      "extraDetails": [
-        "I. Higher return normally comes with lower risk",
-        "II. Higher return normally comes with higher risk",
-        "III. At the top end of the graph are the equity funds",
-        "IV. The relatively risk less cash funds sit at the bottom end of the graph"
-      ],
-      "options": [
-        {
-          "key" : "a",
-          "value" : "----"
-        },{
-          "key" : "b",
-          "value" : "--------"
-        },{
-          "key" : "c",
-          "value" : "-------------"
-        },{
-          "key" : "d",
-          "value" : "------------------"
-        }
-      ],
-      "answer": "b"
     }
   ]
 }
